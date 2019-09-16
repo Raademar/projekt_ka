@@ -4,6 +4,8 @@ import { ThemeProvider } from 'styled-components'
 import theme from './style/theme'
 import GlobalStyle from './style/global'
 import Start from './views/Start'
+import CategoryFilter from './components/CategoryFilter'
+import FeaturedClipsList from './components/FeaturedClipsList'
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <>
         <GlobalStyle />
         <Start />
+          <CategoryFilter />
+      <FeaturedClipsList />
       </>
     </ThemeProvider>
   )
