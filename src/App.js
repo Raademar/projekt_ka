@@ -13,8 +13,8 @@ function App() {
       <>
         <GlobalStyle />
         <Start />
-          <CategoryFilter />
-      <FeaturedClipsList />
+        <CategoryFilter />
+        <FeaturedClipsList />
       </>
     </ThemeProvider>
   )
