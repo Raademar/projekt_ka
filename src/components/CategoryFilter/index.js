@@ -32,8 +32,12 @@ const ArrayOfCategories = [
 const index = () => {
   return (
     <StyledCategoryFilter>
-      {ArrayOfCategories.map(category => (
-        <CategoryCard image={category.image} title={category.title} />
+      {ArrayOfCategories.map((category, index) => (
+        <CategoryCard
+          image={category.image}
+          title={category.title}
+          key={index}
+        />
       ))}
     </StyledCategoryFilter>
   )
