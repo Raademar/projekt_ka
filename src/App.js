@@ -7,6 +7,7 @@ import theme from './style/theme'
 import GlobalStyle from './style/global'
 import Start from './views/Start'
 import About from './views/About'
+import CategoryPage from './views/CategoryPage'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Start}></Route>
             <Route path="/about" component={About}></Route>
+            <Route path="/:category" component={CategoryPage}></Route>
           </Switch>
         </>
       </ThemeProvider>

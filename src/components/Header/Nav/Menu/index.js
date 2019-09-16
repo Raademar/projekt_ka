@@ -1,6 +1,34 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { MenuStyle, CloseButton } from './style'
 import Minus from '../../../icons/Minus'
+
+const menuItems = [
+  {
+    title: 'Om K-play',
+    url: 'om-k-play'
+  },
+  {
+    title: 'Teater',
+    url: 'teater'
+  },
+  {
+    title: 'Film & TV',
+    url: 'film-tv'
+  },
+  {
+    title: 'Musik',
+    url: 'musik'
+  },
+  {
+    title: 'Arebetsliv',
+    url: 'arbetsliv'
+  },
+  {
+    title: 'Marknadsföring',
+    url: 'marknadsforing'
+  }
+]
 
 const Menu = ({ close }) => {
   return (
@@ -8,13 +36,12 @@ const Menu = ({ close }) => {
       <CloseButton onClick={close}>
         <Minus />
       </CloseButton>
-      <h2>Om K-play</h2>
-      <h2>Teater</h2>
-      <h2>Film & Tv</h2>
-      <h2>Musik</h2>
-      <h2>Dans</h2>
-      <h2>Arbetsliv</h2>
-      <h2>Marknadsföring</h2>
+
+      {menuItems.map((item, i) => (
+        <Link key={i} to={`/${item.url}`} onClick={close}>
+          {item.title}
+        </Link>
+      ))}
     </MenuStyle>
   )
 }

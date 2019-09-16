@@ -10,7 +10,7 @@ export const NavWrapper = styled.div`
   padding: 0 20px;
 `
 export const MenuButton = styled.button`
-  height: 100%;
+  height: auto;
   padding: 0;
   display: flex;
   align-items: center;

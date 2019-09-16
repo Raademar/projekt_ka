@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+
 import ArrowBack from '../../icons/ArrowBack'
 import Logo from '../../icons/Logo'
 import Hamburger from '../../icons/Hamburger'
-
 import { NavWrapper, MenuButton } from './style'
+
 import Menu from './Menu'
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -13,7 +15,9 @@ const Nav = () => {
     <>
       <NavWrapper>
         <ArrowBack />
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
         <MenuButton onClick={() => setMenuOpen(true)}>
           <Hamburger />
         </MenuButton>
