@@ -6,15 +6,17 @@ import GlobalStyle from './style/global'
 import Start from './views/Start'
 import CategoryFilter from './components/CategoryFilter'
 import FeaturedClipsList from './components/FeaturedClipsList'
+import About from './views/About'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />
-        <Start />
-          <CategoryFilter />
-      <FeaturedClipsList />
+        {/* <Start />
+        <CategoryFilter />
+        <FeaturedClipsList /> */}
+        <About></About>
       </>
     </ThemeProvider>
   )
