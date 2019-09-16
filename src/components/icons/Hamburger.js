@@ -1,10 +1,6 @@
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 
-interface IHamburger {
-  openMenu?: Function
-}
-
-const Hamburger = (props: IHamburger) => {
+const Hamburger = () => {
   return (
     <svg
       fill="none"
