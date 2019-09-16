@@ -13,14 +13,17 @@ export const MenuStyle = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   color: ${props => props.theme.colors.white[1]};
   padding: 20px;
+  text-transform: uppercase;
 
   h2:first-of-type {
     font-weight: bold;
+    margin-top: 43px;
+    margin-bottom: 40px;
   }
 
   h2 {
     font-weight: normal;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 
   svg {

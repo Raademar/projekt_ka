@@ -8,6 +8,7 @@ import Menu from './Menu'
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
+  // add so if ther is a back the arrow will show, else nothing
   return (
     <>
       <NavWrapper>
