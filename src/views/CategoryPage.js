@@ -1,14 +1,18 @@
 import React from 'react'
 
 import Header from '../components/Header'
+import Layout from '../components/Layout'
 
-const About = ({ match }) => {
+const CategoryPage = ({ location }) => {
+  console.log(location.title)
   return (
-    <div>
+    <>
       <Header></Header>
-      hej
-    </div>
+      <Layout>
+        <h3>{location.title}</h3>
+      </Layout>
+    </>
   )
 }
 
-export default About
+export default CategoryPage

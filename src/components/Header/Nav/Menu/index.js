@@ -38,7 +38,11 @@ const Menu = ({ close }) => {
       </CloseButton>
 
       {menuItems.map((item, i) => (
-        <Link key={i} to={`/${item.url}`} onClick={close}>
+        <Link
+          key={i}
+          to={{ pathname: `/${item.url}`, title: item.title }}
+          onClick={close}
+        >
           {item.title}
         </Link>
       ))}
