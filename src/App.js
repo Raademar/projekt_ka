@@ -1,11 +1,12 @@
-import React from 'react';
+import React from 'react'
+import CategoryFilter from './components/CategoryFilter'
 
 function App() {
   return (
-    <div className="App">
-      <h1>hejsan</h1>
+    <div className='App'>
+      <CategoryFilter />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
