@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import ArrowBack from '../icons/ArrowBack'
-import Logo from '../icons/Logo'
-import Hamburger from '../icons/Hamburger'
+import ArrowBack from '../../icons/ArrowBack'
+import Logo from '../../icons/Logo'
+import Hamburger from '../../icons/Hamburger'
 
 import { NavWrapper, MenuButton } from './style'
 import Menu from './Menu'

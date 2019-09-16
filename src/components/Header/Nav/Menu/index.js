@@ -1,6 +1,6 @@
 import React from 'react'
 import { MenuStyle, CloseButton } from './style'
-import Minus from '../../icons/Minus'
+import Minus from '../../../icons/Minus'
 
 const Menu = ({ close }) => {
   return (

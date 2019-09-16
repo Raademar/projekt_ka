@@ -1,13 +1,11 @@
 import React from 'react'
-import Nav from '../components/Nav'
-import Searchbar from '../components/Searchbar'
+import Header from '../components/Header'
 import CategoryFilter from '../components/CategoryFilter'
 import FeaturedClipsList from '../components/FeaturedClipsList'
 const Start = () => {
   return (
     <div>
-      <Nav></Nav>
-      <Searchbar></Searchbar>
+      <Header></Header>
       <CategoryFilter />
       <FeaturedClipsList />
     </div>

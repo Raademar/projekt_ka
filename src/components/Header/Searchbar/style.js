@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const SearchbarStyled = styled.div`
   width: 100vw;
-  margin: 50px 0 30px 0;
+  margin: 40px 0 0px 0;
 
   form {
     width: 100%;
