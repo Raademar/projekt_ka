@@ -9,3 +9,13 @@ export const NavWrapper = styled.div`
   align-items: center;
   padding: 0 20px;
 `
+export const MenuButton = styled.button`
+  height: 100%;
+  /* padding: 0 ${({ theme }) => theme.space[3]}px; */
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  outline: 0;
+  cursor: pointer;
+`

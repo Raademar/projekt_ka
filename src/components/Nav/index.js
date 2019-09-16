@@ -3,7 +3,7 @@ import ArrowBack from '../icons/ArrowBack'
 import Logo from '../icons/Logo'
 import Hamburger from '../icons/Hamburger'
 
-import { NavWrapper } from './style'
+import { NavWrapper, MenuButton } from './style'
 import Menu from './Menu'
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -13,9 +13,9 @@ const Nav = () => {
       <NavWrapper>
         <ArrowBack />
         <Logo />
-        <button onClick={() => setMenuOpen(true)}>
+        <MenuButton onClick={() => setMenuOpen(true)}>
           <Hamburger />
-        </button>
+        </MenuButton>
       </NavWrapper>
       {menuOpen && <Menu close={() => setMenuOpen(false)}></Menu>}
     </>

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const MenuStyle = styled.div`
+export const MenuStyle = styled.div`
   background-color: ${props => props.theme.colors.darkgrey};
   position: fixed;
   top: 0;
@@ -24,8 +24,17 @@ const MenuStyle = styled.div`
   }
 
   svg {
-    align-self: flex-end;
   }
 `
 
-export default MenuStyle
+export const CloseButton = styled.button`
+  align-self: flex-end;
+  border: none;
+  width: fit-content;
+  background: none;
+  outline: 0;
+
+  svg {
+    align-self: center;
+  }
+`

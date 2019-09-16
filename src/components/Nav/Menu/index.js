@@ -1,13 +1,13 @@
 import React from 'react'
-import MenuStyle from './style'
+import { MenuStyle, CloseButton } from './style'
 import Cross from '../../icons/Cross'
 
 const Menu = ({ close }) => {
   return (
     <MenuStyle>
-      <button onClick={close}>
+      <CloseButton onClick={close}>
         <Cross />
-      </button>
+      </CloseButton>
       <h2>Om K-play</h2>
       <h2>Video</h2>
       <h2>Podcast</h2>

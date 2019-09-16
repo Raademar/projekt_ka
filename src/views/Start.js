@@ -7,7 +7,6 @@ const Start = () => {
     <div>
       <Nav></Nav>
       <Searchbar></Searchbar>
-      <h2>Hejju</h2>
     </div>
   )
 }
