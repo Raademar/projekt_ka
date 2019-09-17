@@ -2,6 +2,7 @@ import React from 'react'
 
 import Header from '../components/Header'
 import Layout from '../components/Layout'
+import Footer from '../components/Footer'
 
 const About = () => {
   return (
@@ -40,6 +41,7 @@ const About = () => {
           delectus magnam blanditiis labore tempore unde provident.
         </h2>
       </Layout>
+      <Footer />
     </>
   )
 }

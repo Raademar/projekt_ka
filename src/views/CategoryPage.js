@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import Layout from '../components/Layout'
+import Footer from '../components/Footer'
 import CategoryFilter from '../components/CategoryFilter'
 import FeaturedClipList from '../components/FeaturedClipsList'
 
@@ -31,6 +32,7 @@ const CategoryPage = props => {
           />
         )}
       </Layout>
+      <Footer />
     </>
   )
 }

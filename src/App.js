@@ -8,6 +8,7 @@ import GlobalStyle from './style/global'
 import Start from './views/Start'
 import About from './views/About'
 import CategoryPage from './views/CategoryPage'
+import VideoView from './views/VideoView'
 import SubcategoryPage from './views/SubcategroyPage'
 
 // const history = createBrowserHistory()
@@ -21,6 +22,11 @@ const App = ({ history }) => {
           <Switch>
             <Route exact path="/" component={Start}></Route>
             <Route path="/about" component={About}></Route>
+            <Route path="/video" component={VideoView}></Route>
+            <Route
+              path="/:category/:subcategory?"
+              component={CategoryPage}
+            ></Route>
             <Route
               path="/:category/:subcategory"
               component={SubcategoryPage}
