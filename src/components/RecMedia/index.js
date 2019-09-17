@@ -4,7 +4,7 @@ import { StyledRecMedia } from './style'
 const RecMedia = () => {
   return (
     <StyledRecMedia>
-      <p>hejs</p>
+      <h3>Du kanske också gillar...</h3>
     </StyledRecMedia>
   )
 }
