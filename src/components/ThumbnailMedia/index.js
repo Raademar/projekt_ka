@@ -1,4 +1,5 @@
 import React from 'react'
+import { StyledThumbnailMedia } from 'styled-components'
 
 const ThumbnailMedia = () => {
   return (
