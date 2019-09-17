@@ -8,6 +8,7 @@ import GlobalStyle from './style/global'
 import Start from './views/Start'
 import About from './views/About'
 import CategoryPage from './views/CategoryPage'
+import VideoView from './views/VideoView'
 
 function App() {
   return (
@@ -18,7 +19,11 @@ function App() {
           <Switch>
             <Route exact path="/" component={Start}></Route>
             <Route path="/about" component={About}></Route>
-            <Route path="/:category" component={CategoryPage}></Route>
+            <Route path="/video" component={VideoView}></Route>
+            <Route
+              path="/:category/:subcategory?"
+              component={CategoryPage}
+            ></Route>
           </Switch>
         </>
       </ThemeProvider>
