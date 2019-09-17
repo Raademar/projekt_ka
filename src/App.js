@@ -24,10 +24,6 @@ const App = ({ history }) => {
             <Route path="/about" component={About}></Route>
             <Route path="/video" component={VideoView}></Route>
             <Route
-              path="/:category/:subcategory?"
-              component={CategoryPage}
-            ></Route>
-            <Route
               path="/:category/:subcategory"
               component={SubcategoryPage}
             ></Route>
