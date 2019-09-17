@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import CategoryFilter from '../components/CategoryFilter'
 import FeaturedClipsList from '../components/FeaturedClipsList'
+import Footer from '../components/Footer'
 import Layout from '../components/Layout'
 const Start = () => {
   return (
@@ -10,6 +11,7 @@ const Start = () => {
       {/* <Layout> */}
       <CategoryFilter />
       <FeaturedClipsList />
+      <Footer />
       {/* </Layout> */}
     </>
   )
