@@ -6,7 +6,7 @@ import Minus from '../../../icons/Minus'
 const menuItems = [
   {
     title: 'Om K-play',
-    url: 'om-k-play'
+    url: 'about'
   },
   {
     title: 'Teater',
@@ -14,18 +14,22 @@ const menuItems = [
     subcategory: [
       {
         title: 'Scenproduktion',
+        url: 'senproduktion',
         image: './images/categories/teather.jpg'
       },
       {
         title: 'Gestaltning',
+        url: 'gestaltning',
         image: './images/categories/teather.jpg'
       },
       {
         title: 'Manus & Storytell',
+        url: 'manus-storytell',
         image: './images/categories/teather.jpg'
       },
       {
         title: 'Teaterteknik',
+        url: 'teaterteknik',
         image: './images/categories/teather.jpg'
       }
     ]
@@ -36,18 +40,22 @@ const menuItems = [
     subcategory: [
       {
         title: 'Produktion',
+        url: 'produktion',
         image: './images/categories/teather.jpg'
       },
       {
         title: 'Plats- & scenteknik',
+        url: 'plats-scenteknik',
         image: './images/categories/teather.jpg'
       },
       {
         title: 'Manus & Storytell',
+        url: 'manus-storytell',
         image: './images/categories/teather.jpg'
       },
       {
         title: 'Digital teknik',
+        url: 'digital-teknik',
         image: './images/categories/teather.jpg'
       }
     ]
@@ -58,18 +66,22 @@ const menuItems = [
     subcategory: [
       {
         title: 'Produktion',
+        url: 'produktion',
         image: './images/categories/teather.jpg'
       },
       {
         title: 'Plats- & scenteknik',
+        url: 'plats-scenteknik',
         image: './images/categories/teather.jpg'
       },
       {
         title: 'Manus & Storytell',
+        url: 'manus-storytell',
         image: './images/categories/teather.jpg'
       },
       {
         title: 'Digital teknik',
+        url: 'digital-teknik',
         image: './images/categories/teather.jpg'
       }
     ]
@@ -80,18 +92,22 @@ const menuItems = [
     subcategory: [
       {
         title: 'Produktion',
+        url: 'produktion',
         image: './images/categories/teather.jpg'
       },
       {
         title: 'Plats- & scenteknik',
+        url: 'plats-scenteknik',
         image: './images/categories/teather.jpg'
       },
       {
         title: 'Manus & Storytell',
+        url: 'manus-storytell',
         image: './images/categories/teather.jpg'
       },
       {
         title: 'Digital teknik',
+        url: 'digital-teknik',
         image: './images/categories/teather.jpg'
       }
     ]
@@ -102,18 +118,22 @@ const menuItems = [
     subcategory: [
       {
         title: 'Produktion',
+        url: 'produktion',
         image: './images/categories/teather.jpg'
       },
       {
         title: 'Plats- & scenteknik',
+        url: 'plats-scenteknik',
         image: './images/categories/teather.jpg'
       },
       {
         title: 'Manus & Storytell',
+        url: 'manus-storytell',
         image: './images/categories/teather.jpg'
       },
       {
         title: 'Digital teknik',
+        url: 'digital-teknik',
         image: './images/categories/teather.jpg'
       }
     ]

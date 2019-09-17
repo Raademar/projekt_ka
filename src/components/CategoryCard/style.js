@@ -16,7 +16,7 @@ export const StyledCategoryCard = styled.div`
         url(${props => props.backgroundImage}) center no-repeat; 
     
     background-size: cover;
-    
+
     h5 {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         display: flex;
@@ -24,5 +24,9 @@ export const StyledCategoryCard = styled.div`
         align-items: center;
         height: 100%;
         color: #FFF;
+    }
+
+    a {
+      text-decoration: none;
     }
 `

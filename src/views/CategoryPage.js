@@ -4,7 +4,9 @@ import Layout from '../components/Layout'
 import CategoryFilter from '../components/CategoryFilter'
 import FeaturedClipList from '../components/FeaturedClipsList'
 
-const CategoryPage = ({ location }) => {
+const CategoryPage = props => {
+  const { location } = props
+
   const [locationExists, setLocationExists] = useState(false)
 
   useEffect(() => {
@@ -23,6 +25,7 @@ const CategoryPage = ({ location }) => {
 
         {locationExists && (
           <CategoryFilter
+            path={props.location.pathname}
             array={location.subcategory}
             backgroundColor="black"
           />
