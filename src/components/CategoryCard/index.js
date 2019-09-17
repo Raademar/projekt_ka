@@ -10,7 +10,12 @@ const index = props => {
       backgroundImage={props.image}
       backgroundColor={props.backgroundColor}
     >
-      <NavLink to={`${props.path}/${props.url}`}>
+      <NavLink
+        to={{
+          pathname: `${props.path}/${props.url}`,
+          title: props.title
+        }}
+      >
         <h5>{props.title}</h5>
       </NavLink>
     </StyledCategoryCard>
