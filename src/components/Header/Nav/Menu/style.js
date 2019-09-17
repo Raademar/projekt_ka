@@ -15,18 +15,18 @@ export const MenuStyle = styled.div`
   padding: 20px;
   text-transform: uppercase;
 
-  h2:first-of-type {
+  a:first-of-type {
     font-weight: bold;
     margin-top: 43px;
     margin-bottom: 40px;
   }
 
-  h2 {
-    font-weight: normal;
+  a {
+    color: ${props => props.theme.colors.white[1]};
+    font-weight: normal:
     margin-bottom: 12px;
-  }
-
-  svg {
+    font-size: 24px;
+    text-decoration: none;
   }
 `
 
@@ -36,6 +36,7 @@ export const CloseButton = styled.button`
   width: fit-content;
   background: none;
   outline: 0;
+  padding: 0;
 
   svg {
     align-self: center;
