@@ -9,7 +9,6 @@ import { NavWrapper, MenuButton } from './style'
 import Menu from './Menu'
 const Nav = ({ active }) => {
   const [menuOpen, setMenuOpen] = useState(false)
-  console.log(active)
 
   // add so if ther is a back the arrow will show, else nothing
   return (

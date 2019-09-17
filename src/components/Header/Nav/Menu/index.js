@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { MenuStyle, CloseButton } from './style'
 import Minus from '../../../icons/Minus'
 
@@ -10,23 +10,113 @@ const menuItems = [
   },
   {
     title: 'Teater',
-    url: 'teater'
+    url: 'teater',
+    subcategory: [
+      {
+        title: 'Scenproduktion',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Gestaltning',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Manus & Storytelling',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Teaterteknik',
+        image: './images/categories/teather.jpg'
+      }
+    ]
   },
   {
     title: 'Film & TV',
-    url: 'film-tv'
+    url: 'film-tv',
+    subcategory: [
+      {
+        title: 'Produktion',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Plats- & scenteknik',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Manus & Storytelling',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Digital teknik',
+        image: './images/categories/teather.jpg'
+      }
+    ]
   },
   {
     title: 'Musik',
-    url: 'musik'
+    url: 'musik',
+    subcategory: [
+      {
+        title: 'Produktion',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Plats- & scenteknik',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Manus & Storytelling',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Digital teknik',
+        image: './images/categories/teather.jpg'
+      }
+    ]
   },
   {
     title: 'Arebetsliv',
-    url: 'arbetsliv'
+    url: 'arbetsliv',
+    subcategory: [
+      {
+        title: 'Produktion',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Plats- & scenteknik',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Manus & Storytelling',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Digital teknik',
+        image: './images/categories/teather.jpg'
+      }
+    ]
   },
   {
     title: 'Marknadsföring',
-    url: 'marknadsforing'
+    url: 'marknadsforing',
+    subcategory: [
+      {
+        title: 'Produktion',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Plats- & scenteknik',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Manus & Storytelling',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Digital teknik',
+        image: './images/categories/teather.jpg'
+      }
+    ]
   }
 ]
 
@@ -38,13 +128,18 @@ const Menu = ({ close, active }) => {
       </CloseButton>
 
       {menuItems.map((item, i) => (
-        <Link
+        <NavLink
+          activeClassName="is-active"
           key={i}
-          to={{ pathname: `/${item.url}`, title: item.title }}
+          to={{
+            pathname: `/${item.url}`,
+            title: item.title,
+            subcategory: item.subcategory
+          }}
           onClick={close}
         >
           {item.title}
-        </Link>
+        </NavLink>
       ))}
     </MenuStyle>
   )

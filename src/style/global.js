@@ -9,6 +9,10 @@ const GlobalStyle = createGlobalStyle`
 body {
     background: #fff;
 }
+
+.is-active {
+    font-weight: bold;
+}
 `
 
 export default GlobalStyle
