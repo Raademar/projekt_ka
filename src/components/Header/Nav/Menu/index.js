@@ -87,7 +87,7 @@ const menuItems = [
         image: './images/categories/teather.jpg'
       },
       {
-        title: 'Manus & Storytelling',
+        title: 'Manus & Storytell',
         image: './images/categories/teather.jpg'
       },
       {

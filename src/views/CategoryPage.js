@@ -21,7 +21,12 @@ const CategoryPage = ({ location }) => {
         <h4>Nyheter</h4>
         <FeaturedClipList></FeaturedClipList>
 
-        {locationExists && <CategoryFilter array={location.subcategory} />}
+        {locationExists && (
+          <CategoryFilter
+            array={location.subcategory}
+            backgroundColor="black"
+          />
+        )}
       </Layout>
     </>
   )
