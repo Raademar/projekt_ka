@@ -4,10 +4,10 @@ import Header from '../components/Header'
 import Layout from '../components/Layout'
 
 const CategoryPage = ({ location }) => {
-  console.log(location.title)
+  //   console.log(location.title)
   return (
     <>
-      <Header></Header>
+      <Header active={location.title}></Header>
       <Layout>
         <h3>{location.title}</h3>
       </Layout>

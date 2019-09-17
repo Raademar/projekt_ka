@@ -2,10 +2,10 @@ import React from 'react'
 import Nav from './Nav'
 import Searchbar from './Searchbar'
 import { HeaderStyle } from './style'
-const Header = () => {
+const Header = ({ active }) => {
   return (
     <HeaderStyle>
-      <Nav></Nav>
+      <Nav active={active}></Nav>
       <Searchbar></Searchbar>
     </HeaderStyle>
   )

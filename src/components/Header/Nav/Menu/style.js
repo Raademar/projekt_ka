@@ -23,7 +23,7 @@ export const MenuStyle = styled.div`
 
   a {
     color: ${props => props.theme.colors.white[1]};
-    font-weight: normal;
+    font-weight: normal:
     margin-bottom: 12px;
     font-size: 24px;
     text-decoration: none;

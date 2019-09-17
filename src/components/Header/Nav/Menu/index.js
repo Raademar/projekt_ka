@@ -30,7 +30,7 @@ const menuItems = [
   }
 ]
 
-const Menu = ({ close }) => {
+const Menu = ({ close, active }) => {
   return (
     <MenuStyle>
       <CloseButton onClick={close}>
