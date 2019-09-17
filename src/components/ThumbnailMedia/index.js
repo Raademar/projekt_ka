@@ -3,7 +3,7 @@ import { StyledThumbnailMedia } from './style'
 const ThumbnailMedia = () => {
   return (
     <StyledThumbnailMedia>
-      <p>hej</p>
+      <img src="/" />
     </StyledThumbnailMedia>
   )
 }
