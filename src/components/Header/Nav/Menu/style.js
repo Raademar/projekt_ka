@@ -16,14 +16,12 @@ export const MenuStyle = styled.div`
   text-transform: uppercase;
 
   a:first-of-type {
-    font-weight: bold;
     margin-top: 43px;
     margin-bottom: 40px;
   }
 
   a {
     color: ${props => props.theme.colors.white[1]};
-    font-weight: normal;
     margin-bottom: 12px;
     font-size: 24px;
     text-decoration: none;

@@ -20,6 +20,17 @@ h3 {
 p {
     margin: 20px 0;
     line-height: 124%;
+
+h2, h4 {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+h3 {
+    font-size: 24px;
+}
+.is-active {
+    font-weight: bold;
 }
 `
 
