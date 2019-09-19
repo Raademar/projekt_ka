@@ -4,6 +4,7 @@ export const MenuStyle = styled.div`
   background-color: ${props => props.theme.colors.darkgrey};
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 999;
   display: flex;
   flex-direction: column;
@@ -29,12 +30,14 @@ export const MenuStyle = styled.div`
 `
 
 export const CloseButton = styled.button`
-  align-self: flex-end;
+  align-self: ${props => (props.filter ? 'flex-start' : 'flex-end')};
   border: none;
   width: fit-content;
   background: none;
   outline: 0;
   padding: 0;
+
+  margin-top: ${props => (props.filter ? '9px' : '0')};
 
   svg {
     align-self: center;
