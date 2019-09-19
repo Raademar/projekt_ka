@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 export const NavWrapper = styled.div`
   background: #323332;
+  position: absolute;
+  z-index: 800;
   height: 10vh;
   width: 100vw;
   display: flex;

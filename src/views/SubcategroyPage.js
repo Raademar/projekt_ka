@@ -5,6 +5,7 @@ import ThumbnailMedia from '../components/ThumbnailMedia'
 
 const SubcategoryPage = props => {
   const title = props.location.title
+
   return (
     <>
       <Header />
