@@ -40,8 +40,8 @@ const Start = props => {
       <Layout>
         <CategoryFilter array={menuArray} pathName={props.location.pathname} />
         <FeaturedClipsList />
-        <Footer />
       </Layout>
+      <Footer />
     </>
   )
 }
