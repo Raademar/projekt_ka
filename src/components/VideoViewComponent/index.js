@@ -8,7 +8,7 @@ import LinkedIn from '../icons/LinkedIn'
 
 const VideoViewComponent = ({ videoId, title, length, date, type, text }) => {
   const opts = {
-    height: '100%',
+    height: '191',
     width: '100%',
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
