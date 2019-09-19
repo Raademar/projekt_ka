@@ -17,7 +17,6 @@ const Searchbar = () => {
       window.removeEventListener('scroll', handleScroll)
     }
   })
-  // console.log(window.pageYOffset)
   return (
     <SearchbarStyled scroll={visible}>
       <form>

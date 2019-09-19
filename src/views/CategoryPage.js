@@ -28,6 +28,7 @@ const CategoryPage = props => {
           <CategoryFilter
             path={props.location.pathname}
             array={location.subcategory}
+            title={location.title}
             backgroundColor="black"
           />
         )}
