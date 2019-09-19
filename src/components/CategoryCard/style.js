@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const StyledCategoryCard = styled.div`
-    height: 162px;
-    width: 162px;
+    height: 157px;
+    width: 157px;
     /* background-color: rgba(233, 90, 50, 0.7) ;
     background-image: url(${props => props.backgroundImage});
     background-size: cover;

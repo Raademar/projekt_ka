@@ -9,7 +9,6 @@ const CategoryPage = props => {
   const { location } = props
 
   const [locationExists, setLocationExists] = useState(false)
-
   useEffect(() => {
     if (typeof location.subcategory !== 'undefined') {
       setLocationExists(true)
@@ -28,6 +27,7 @@ const CategoryPage = props => {
           <CategoryFilter
             path={props.location.pathname}
             array={location.subcategory}
+            title={location.title}
             backgroundColor="black"
           />
         )}

@@ -9,6 +9,10 @@ export const StyledFeaturedClipList = styled.div`
     color: black;
     text-decoration: none;
   }
+  div:first-of-type {
+    margin: 0;
+    padding-left: 0px;
+  }
   div {
     margin: 0 5px;
     padding-left: 15px;

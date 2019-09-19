@@ -4,6 +4,7 @@ import CategoryFilter from '../components/CategoryFilter'
 import FeaturedClipsList from '../components/FeaturedClipsList'
 import Footer from '../components/Footer'
 import Layout from '../components/Layout'
+import { menuArray } from '../data/menuArray'
 
 const arrayOfCategories = [
   {
@@ -32,15 +33,15 @@ const arrayOfCategories = [
   }
 ]
 
-const Start = () => {
+const Start = props => {
   return (
     <>
       <Header></Header>
-      {/* <Layout> */}
-      <CategoryFilter array={arrayOfCategories} />
-      <FeaturedClipsList />
-      <Footer />
-      {/* </Layout> */}
+      <Layout>
+        <CategoryFilter array={menuArray} pathName={props.location.pathname} />
+        <FeaturedClipsList />
+        <Footer />
+      </Layout>
     </>
   )
 }

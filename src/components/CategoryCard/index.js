@@ -3,15 +3,29 @@ import { NavLink } from 'react-router-dom'
 import { StyledCategoryCard } from './style'
 
 const index = props => {
-  console.log(props)
-
+  const {
+    title,
+    url,
+    pathName,
+    path,
+    subcategory,
+    image,
+    backgroundColor
+  } = props
   return (
     <StyledCategoryCard
-      backgroundImage={props.image}
-      backgroundColor={props.backgroundColor}
+      backgroundImage={image}
+      backgroundColor={backgroundColor}
     >
-      <NavLink to={`${props.path}/${props.url}`}>
-        <h5>{props.title}</h5>
+      <NavLink
+        to={{
+          pathname:
+            typeof pathName !== 'undefined' ? `/${url}` : `${path}/${url}`,
+          title: title,
+          subcategory: subcategory
+        }}
+      >
+        <h5>{title}</h5>
       </NavLink>
     </StyledCategoryCard>
   )

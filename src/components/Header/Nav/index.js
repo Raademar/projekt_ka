@@ -7,9 +7,8 @@ import Hamburger from '../../icons/Hamburger'
 import { NavWrapper, MenuButton } from './style'
 
 import Menu from './Menu'
-const Nav = ({ active }) => {
+const Nav = props => {
   const [menuOpen, setMenuOpen] = useState(false)
-
   // add so if ther is a back the arrow will show, else nothing
   return (
     <>
@@ -23,7 +22,7 @@ const Nav = ({ active }) => {
         </MenuButton>
       </NavWrapper>
       {menuOpen && (
-        <Menu close={() => setMenuOpen(false)} active={active}></Menu>
+        <Menu close={() => setMenuOpen(false)} active={props.active}></Menu>
       )}
     </>
   )
