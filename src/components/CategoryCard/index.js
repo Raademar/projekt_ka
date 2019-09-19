@@ -12,7 +12,6 @@ const index = props => {
     image,
     backgroundColor
   } = props
-
   return (
     <StyledCategoryCard
       backgroundImage={image}

@@ -5,8 +5,6 @@ import { StyledCategoryFilter } from './style'
 const index = props => {
   const { array, backgroundColor, path, pathName } = props
 
-  console.log(props)
-
   return (
     <StyledCategoryFilter>
       {array.map((category, index) => (

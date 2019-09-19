@@ -9,7 +9,6 @@ const CategoryPage = props => {
   const { location } = props
 
   const [locationExists, setLocationExists] = useState(false)
-
   useEffect(() => {
     if (typeof location.subcategory !== 'undefined') {
       setLocationExists(true)

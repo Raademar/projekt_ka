@@ -37,11 +37,11 @@ const Start = props => {
   return (
     <>
       <Header></Header>
-      {/* <Layout> */}
-      <CategoryFilter array={menuArray} pathName={props.location.pathname} />
-      <FeaturedClipsList />
-      <Footer />
-      {/* </Layout> */}
+      <Layout>
+        <CategoryFilter array={menuArray} pathName={props.location.pathname} />
+        <FeaturedClipsList />
+        <Footer />
+      </Layout>
     </>
   )
 }
