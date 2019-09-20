@@ -7,6 +7,10 @@ export default {
     gold: '#D0843C',
     orange: '#E95A32'
   },
+  fonts: [
+    'Arial, Helvetica, sans-serif',
+    'Georgia, Times New Roman, Times, serif'
+  ],
   fontSizes: {
     body: '15px',
     heading: ['24px', '20px', '48px']
