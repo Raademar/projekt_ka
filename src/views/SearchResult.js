@@ -4,10 +4,14 @@ import Footer from '../components/Footer'
 import SrcResultsFilter from '../components/SrcResultsFilter'
 import Header from '../components/Header'
 import Layout from '../components/Layout'
-const SearchResult = () => {
+import Filter from '../components/Filter'
+const SearchResult = props => {
   return (
     <>
       <Header />
+      <Layout>
+        <Filter location={props.location}></Filter>
+      </Layout>
       <SrcResultsFilter />
       <Footer />
     </>
