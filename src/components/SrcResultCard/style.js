@@ -5,7 +5,6 @@ export const StyledSrcResultCard = styled.div`
   background: ${props => props.theme.colors.darkgrey};
   color: white;
   padding: 10px;
-  font-size: 12px;
 
   img {
     width: 77px;
@@ -16,10 +15,12 @@ export const StyledSrcResultCard = styled.div`
   h5 {
     width: 50%;
     margin: 0 15px 0 12px;
+    font-size: 12px;
   }
 
   p {
     text-align: right;
     margin: 0;
+    font-size: 12px;
   }
 `
