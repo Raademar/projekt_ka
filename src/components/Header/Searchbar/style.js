@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const SearchbarStyled = styled.div`
   position: relative;
-  top: ${props => (props.scroll ? '81px' : '-200px')};
+  top: ${props => (props.scroll ? '70px' : '-200px')};
   transition: top 0.6s;
   width: 100vw;
   margin-bottom: 40px;
