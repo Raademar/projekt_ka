@@ -1,20 +1,26 @@
-import React, { useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { MenuStyle, CloseButton, FilterStyle, FilterButton } from './style'
 import Minus from '../../../icons/Minus'
 import { menuItems } from './menuItems'
 import ArrowBack from '../../../icons/ArrowBack'
-// import FilterButton from '../../../icons/FilterButton'
 
+import { SortContext } from '../../../../App'
 const filterItems = ['Video', 'Podd']
 
-const sortItems = ['A-Ö', 'Populära', 'senast först', 'tidigast först']
+const sortItems = ['A-Ö', 'Populärt', 'Senast först', 'Tidigast först']
 
-const Menu = ({ close, active, filter }) => {
-  const [activeFilter, setActiveFilter] = useState([])
+const Menu = props => {
+  const { close, filter } = props
+
+  const { sort, setSort } = useContext(SortContext)
   const [addedFilter, setAddedFilter] = useState(null)
-  const [add, setAdd] = useState('bold')
-  console.log(addedFilter)
+  const [addedSort, setAddedSort] = useState(sort)
+
+  useEffect(() => {
+    setSort(addedSort)
+  }, [addedSort])
+
   return (
     <MenuStyle>
       <CloseButton onClick={close} filter={filter}>
@@ -32,9 +38,12 @@ const Menu = ({ close, active, filter }) => {
                   ? setAddedFilter(null)
                   : setAddedFilter(item)
               }
+              activeFilter={item}
               added={addedFilter === item ? 'bold' : 'normal'}
             >
-              <h2>{item}</h2>
+              <NavLink to={addedFilter === item ? '' : `?filter=${item}`}>
+                <h2>{item}</h2>
+              </NavLink>
             </FilterButton>
           ))}
           <h2>Sortera</h2>
@@ -42,13 +51,13 @@ const Menu = ({ close, active, filter }) => {
             <FilterButton
               key={i}
               onClick={() =>
-                addedFilter !== null
-                  ? setAddedFilter(null)
-                  : setAddedFilter(item)
+                addedSort !== null ? setAddedSort(null) : setAddedSort(item)
               }
-              added={addedFilter === item ? 'bold' : 'normal'}
+              added={addedSort === item ? 'bold' : 'normal'}
             >
-              <h2>{item}</h2>
+              <NavLink to={addedSort === item ? '' : `?sort=${item}`}>
+                <h2>{item}</h2>
+              </NavLink>
             </FilterButton>
           ))}
         </FilterStyle>

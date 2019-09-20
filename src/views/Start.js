@@ -40,7 +40,7 @@ const Start = props => {
       <Header></Header>
       <Layout>
         {/* <CategoryFilter array={menuArray} pathName={props.location.pathname} /> */}
-        <Filter />
+        <Filter location={props.location} />
       </Layout>
       <Footer />
     </>
