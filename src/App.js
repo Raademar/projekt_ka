@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { Switch, Route } from 'react-router'
 import { BrowserRouter as Router } from 'react-router-dom'
@@ -10,22 +10,29 @@ import CategoryPage from './views/CategoryPage'
 import VideoView from './views/VideoView'
 import SubcategoryPage from './views/SubcategroyPage'
 
+export const SortContext = createContext(null)
+
 const App = ({ history }) => {
+  const [sort, setSort] = useState('Populärt')
   return (
     <Router history={history}>
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyle />
-          <Switch>
-            <Route exact path="/" component={Start}></Route>
-            <Route path="/about" component={About}></Route>
-            <Route path="/video" component={VideoView}></Route>
-            <Route
-              path="/:category/:subcategory"
-              component={SubcategoryPage}
-            ></Route>
-            <Route path="/:category" component={CategoryPage}></Route>
-          </Switch>
+          <SortContext.Provider value={{ sort, setSort }}>
+            <Switch>
+              <Route path="?q=filter" component={Start}></Route>
+              <Route exact path="/" component={Start}></Route>
+              <Route exact path="/about" component={About}></Route>
+              <Route exact path="/video" component={VideoView}></Route>
+              <Route
+                exact
+                path="/:category/:subcategory"
+                component={SubcategoryPage}
+              ></Route>
+              <Route exact path="/:category" component={CategoryPage}></Route>
+            </Switch>
+          </SortContext.Provider>
         </>
       </ThemeProvider>
     </Router>

@@ -8,9 +8,8 @@ const GlobalStyle = createGlobalStyle`
 }
 body {
     background: #fff;
+    font-family: ${props => props.theme.fonts[1]};
 }
-
-
 
 p {
     margin: 20px 0;
@@ -26,7 +25,9 @@ h3 {
     font-weight: normal;
 }
 .is-active {
+    display: none;
     font-weight: bold;
+    background: red;
 }
 }
 `

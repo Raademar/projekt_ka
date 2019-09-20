@@ -1,11 +1,8 @@
 export const menuItems = [
   {
-    title: 'Om K-play',
-    url: 'about'
-  },
-  {
     title: 'Teater',
     url: 'teater',
+    image: './images/categories/teather.jpg',
     subcategory: [
       {
         title: 'Scenproduktion',
@@ -18,8 +15,8 @@ export const menuItems = [
         image: './images/categories/teather.jpg'
       },
       {
-        title: 'Manus & Storytell',
-        url: 'manus-storytell',
+        title: 'Manus & Storytelling',
+        url: 'manus-storytelling',
         image: './images/categories/teather.jpg'
       },
       {
@@ -32,6 +29,7 @@ export const menuItems = [
   {
     title: 'Film & TV',
     url: 'film-tv',
+    image: './images/categories/movie_tv.jpg',
     subcategory: [
       {
         title: 'Produktion',
@@ -44,8 +42,8 @@ export const menuItems = [
         image: './images/categories/teather.jpg'
       },
       {
-        title: 'Manus & Storytell',
-        url: 'manus-storytell',
+        title: 'Manus & Storytelling',
+        url: 'manus-storytelling',
         image: './images/categories/teather.jpg'
       },
       {
@@ -58,6 +56,34 @@ export const menuItems = [
   {
     title: 'Musik',
     url: 'musik',
+    image: './images/categories/music.jpg',
+    subcategory: [
+      {
+        title: 'Komposition',
+        url: 'komposition',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Musicerande',
+        url: 'musicerande',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Produktion',
+        url: 'produktion',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Scenteknik',
+        url: 'scenteknik',
+        image: './images/categories/teather.jpg'
+      }
+    ]
+  },
+  {
+    title: 'Dans',
+    url: 'dans',
+    image: './images/categories/dance.jpg',
     subcategory: [
       {
         title: 'Produktion',
@@ -70,8 +96,8 @@ export const menuItems = [
         image: './images/categories/teather.jpg'
       },
       {
-        title: 'Manus & Storytell',
-        url: 'manus-storytell',
+        title: 'Manus & Storytelling',
+        url: 'manus-storytelling',
         image: './images/categories/teather.jpg'
       },
       {
@@ -84,20 +110,48 @@ export const menuItems = [
   {
     title: 'Arebetsliv',
     url: 'arbetsliv',
+    image: './images/categories/work_life.jpg',
     subcategory: [
       {
-        title: 'Produktion',
-        url: 'produktion',
+        title: 'Företagande',
+        url: 'företagande',
         image: './images/categories/teather.jpg'
       },
       {
-        title: 'Plats- & scenteknik',
-        url: 'plats-scenteknik',
+        title: 'Nytt jobb',
+        url: 'nytt-jobb',
         image: './images/categories/teather.jpg'
       },
       {
-        title: 'Manus & Storytell',
-        url: 'manus-storytell',
+        title: 'Arbetsmiljö',
+        url: 'arbetsmiljö',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Juridik',
+        url: 'juridik',
+        image: './images/categories/teather.jpg'
+      }
+    ]
+  },
+  {
+    title: 'Marknadsföring',
+    url: 'marknadsforing',
+    image: './images/categories/marketing.jpg',
+    subcategory: [
+      {
+        title: 'Digitala kanaler',
+        url: 'digitala-kanaler',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Varumärkses- identitet',
+        url: 'varamärkesidentitet',
+        image: './images/categories/teather.jpg'
+      },
+      {
+        title: 'Manus & Storytelling',
+        url: 'manus-storytelling',
         image: './images/categories/teather.jpg'
       },
       {
@@ -108,27 +162,33 @@ export const menuItems = [
     ]
   },
   {
-    title: 'Marknadsföring',
-    url: 'marknadsforing',
+    title: 'Ledarskap & gruppdynamik',
+    url: 'ledarskap-gruppdynamik',
     subcategory: [
       {
-        title: 'Produktion',
-        url: 'produktion',
+        title: 'Projektledning',
+        url: 'projektledning',
         image: './images/categories/teather.jpg'
       },
       {
-        title: 'Plats- & scenteknik',
-        url: 'plats-scenteknik',
+        title: 'Gruppdynamik',
+        url: 'gruppdynamik',
+        image: './images/categories/teather.jpg'
+      }
+    ]
+  },
+  {
+    title: 'Finansiering',
+    url: 'finansiering',
+    subcategory: [
+      {
+        title: 'Bidrag & Stipendier',
+        url: 'bidrag-stipendier',
         image: './images/categories/teather.jpg'
       },
       {
-        title: 'Manus & Storytell',
-        url: 'manus-storytell',
-        image: './images/categories/teather.jpg'
-      },
-      {
-        title: 'Digital teknik',
-        url: 'digital-teknik',
+        title: 'Sponsorer & Samarbeten',
+        url: 'sponsorer-samarbeten',
         image: './images/categories/teather.jpg'
       }
     ]
