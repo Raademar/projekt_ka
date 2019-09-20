@@ -10,8 +10,6 @@ body {
     background: #fff;
 }
 
-
-
 p {
     margin: 20px 0;
     line-height: 124%;

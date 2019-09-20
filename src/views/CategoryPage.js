@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import Footer from '../components/Footer'
 import CategoryFilter from '../components/CategoryFilter'
 import FeaturedClipList from '../components/FeaturedClipsList'
+import ResultPageTitle from '../components/ResultPageTitle'
 
 const CategoryPage = props => {
   const { location } = props
@@ -19,8 +20,10 @@ const CategoryPage = props => {
     <>
       <Header active={location.title}></Header>
       <Layout>
-        <h3>{location.title}</h3>
-        <h4>Nyheter</h4>
+        <ResultPageTitle
+          title={location.title}
+          subtitle="Nyheter"
+        ></ResultPageTitle>
         <FeaturedClipList></FeaturedClipList>
 
         {locationExists && (

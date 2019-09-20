@@ -7,6 +7,7 @@ export const StyledCategoryFilter = styled.div`
   justify-content: center;
   div {
     margin: 5px;
+    padding: 13px;
     h5 {
       margin: 0;
       text-transform: uppercase;

@@ -39,7 +39,7 @@ const Start = props => {
     <>
       <Header></Header>
       <Layout>
-        {/* <CategoryFilter array={menuArray} pathName={props.location.pathname} /> */}
+        <CategoryFilter array={menuArray} pathName={props.location.pathname} />
         <Filter location={props.location} />
       </Layout>
       <Footer />
