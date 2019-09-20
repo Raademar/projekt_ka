@@ -9,6 +9,7 @@ import About from './views/About'
 import CategoryPage from './views/CategoryPage'
 import VideoView from './views/VideoView'
 import SubcategoryPage from './views/SubcategroyPage'
+import SearchResult from './views/SearchResult'
 
 export const SortContext = createContext(null)
 
@@ -24,6 +25,7 @@ const App = ({ history }) => {
               <Route path="?q=filter" component={Start}></Route>
               <Route exact path="/" component={Start}></Route>
               <Route exact path="/about" component={About}></Route>
+              <Route exact path="/search" component={SearchResult}></Route>
               <Route exact path="/video" component={VideoView}></Route>
               <Route
                 exact

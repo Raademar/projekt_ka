@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 import Layout from '../components/Layout'
 import { menuArray } from '../data/menuArray'
 import Filter from '../components/Filter'
+import ThumbnailMedia from '../components/ThumbnailMedia'
 
 const arrayOfCategories = [
   {
@@ -39,8 +40,9 @@ const Start = props => {
     <>
       <Header></Header>
       <Layout>
-        <CategoryFilter array={menuArray} pathName={props.location.pathname} />
+        {/* <CategoryFilter array={menuArray} pathName={props.location.pathname} /> */}
         <Filter location={props.location} />
+        <ThumbnailMedia color="white"></ThumbnailMedia>
       </Layout>
       <Footer />
     </>

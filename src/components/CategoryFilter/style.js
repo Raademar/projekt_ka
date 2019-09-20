@@ -5,6 +5,7 @@ export const StyledCategoryFilter = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 20px;
   div {
     margin: 5px;
     padding: 13px;

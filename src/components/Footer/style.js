@@ -10,6 +10,7 @@ export const StyledFooter = styled.div`
   bottom: 0;
   left: 0;
   right: 0; */
+  margin-top: 80px;
 
   div:first-of-type {
     width: 40vw;

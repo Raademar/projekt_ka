@@ -2,8 +2,10 @@ import styled from 'styled-components'
 
 export const StyledThumbnailMedia = styled.div`
   display: flex;
-  background: ${props => props.theme.colors.lightgrey};
-  padding: 20px;
+  background: ${props =>
+    props.color ? 'white' : props.theme.colors.lightgrey};
+  /* background: ${props => props.theme.colors.lightgrey}; */
+  padding: ${props => (props.color ? '0' : '20px')};
   flex-direction: column;
 
   img {
@@ -12,6 +14,7 @@ export const StyledThumbnailMedia = styled.div`
   }
 
   h2 {
+    font-size: 18px;
     margin-top: 10px;
   }
 
