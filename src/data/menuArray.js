@@ -7,22 +7,22 @@ export const menuArray = [
       {
         title: 'Scenproduktion',
         url: 'senproduktion',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/scenproduktion.jpg'
       },
       {
         title: 'Gestaltning',
         url: 'gestaltning',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/gestaltning.jpg'
       },
       {
         title: 'Manus & Storytelling',
-        url: 'manus-storytelling',
-        image: './images/categories/teather.jpg'
+        url: 'manusstorytelling',
+        image: './images/categories/manusstorytelling.jpg'
       },
       {
         title: 'Teaterteknik',
         url: 'teaterteknik',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/teaterteknik.jpg'
       }
     ]
   },
@@ -34,22 +34,22 @@ export const menuArray = [
       {
         title: 'Produktion',
         url: 'produktion',
-        image: './images/categories/teather.jpg'
-      },
-      {
-        title: 'Plats- & scenteknik',
-        url: 'plats-scenteknik',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/produktion.jpg'
       },
       {
         title: 'Manus & Storytelling',
         url: 'manus-storytelling',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/manusstorytelling.jpg'
+      },
+      {
+        title: 'Plats- & scenteknik',
+        url: 'plats-scenteknik',
+        image: './images/categories/platsscenteknik.jpg'
       },
       {
         title: 'Digital teknik',
         url: 'digital-teknik',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/digitalteknik.jpg'
       }
     ]
   },
@@ -61,22 +61,22 @@ export const menuArray = [
       {
         title: 'Komposition',
         url: 'komposition',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/komposition.jpg'
       },
       {
         title: 'Musicerande',
         url: 'musicerande',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/musicerande.jpg'
       },
       {
         title: 'Produktion',
         url: 'produktion',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/produktion.jpg'
       },
       {
         title: 'Scenteknik',
         url: 'scenteknik',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/scenteknik.jpg'
       }
     ]
   },
@@ -86,24 +86,24 @@ export const menuArray = [
     image: './images/categories/dance.jpg',
     subcategory: [
       {
-        title: 'Produktion',
-        url: 'produktion',
-        image: './images/categories/teather.jpg'
+        title: 'Scenproduktion',
+        url: 'senproduktion',
+        image: './images/categories/scenproduktion.jpg'
       },
       {
-        title: 'Plats- & scenteknik',
-        url: 'plats-scenteknik',
-        image: './images/categories/teather.jpg'
+        title: 'Gestaltning',
+        url: 'gestaltning',
+        image: './images/categories/gestaltning.jpg'
       },
       {
-        title: 'Manus & Storytelling',
-        url: 'manus-storytelling',
-        image: './images/categories/teather.jpg'
+        title: 'Koreografi',
+        url: 'koreografi',
+        image: './images/categories/koreografi.jpg'
       },
       {
-        title: 'Digital teknik',
-        url: 'digital-teknik',
-        image: './images/categories/teather.jpg'
+        title: 'Scenteknik',
+        url: 'scenteknik',
+        image: './images/categories/scenteknik.jpg'
       }
     ]
   },
@@ -115,22 +115,22 @@ export const menuArray = [
       {
         title: 'Företagande',
         url: 'företagande',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/foretagande.jpg'
       },
       {
         title: 'Nytt jobb',
         url: 'nytt-jobb',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/nyttjobb.jpg'
       },
       {
         title: 'Arbetsmiljö',
         url: 'arbetsmiljö',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/arbetsmiljo.jpg'
       },
       {
         title: 'Juridik',
         url: 'juridik',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/juridik.jpg'
       }
     ]
   },
@@ -142,54 +142,46 @@ export const menuArray = [
       {
         title: 'Digitala kanaler',
         url: 'digitala-kanaler',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/digitalakanaler.jpg'
       },
       {
         title: 'Varumärkses- identitet',
         url: 'varamärkesidentitet',
-        image: './images/categories/teather.jpg'
-      },
-      {
-        title: 'Manus & Storytelling',
-        url: 'manus-storytelling',
-        image: './images/categories/teather.jpg'
-      },
-      {
-        title: 'Digital teknik',
-        url: 'digital-teknik',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/varumarkesindentitet.jpg'
       }
     ]
   },
   {
     title: 'Ledarskap & gruppdynamik',
     url: 'ledarskap-gruppdynamik',
+    image: './images/categories/gruppdynamik.jpg',
     subcategory: [
       {
         title: 'Projektledning',
         url: 'projektledning',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/projektledning.jpg'
       },
       {
         title: 'Gruppdynamik',
         url: 'gruppdynamik',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/gruppdynamik.jpg'
       }
     ]
   },
   {
     title: 'Finansiering',
     url: 'finansiering',
+    image: './images/categories/bidragstipendier.jpg',
     subcategory: [
       {
         title: 'Bidrag & Stipendier',
         url: 'bidrag-stipendier',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/bidragstipendier.jpg'
       },
       {
         title: 'Sponsorer & Samarbeten',
         url: 'sponsorer-samarbeten',
-        image: './images/categories/teather.jpg'
+        image: './images/categories/sponsorersamarbeten.jpg'
       }
     ]
   }
