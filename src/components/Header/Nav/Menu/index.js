@@ -1,8 +1,14 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import { MenuStyle, CloseButton, FilterStyle, FilterButton } from './style'
+import {
+  MenuWrapper,
+  CloseButton,
+  FilterStyle,
+  FilterButton,
+  MenuStyle
+} from './style'
 import Minus from '../../../icons/Minus'
-import { menuItems } from './menuItems'
+import { menuArray } from '../../../../data/menuArray'
 import ArrowBack from '../../../icons/ArrowBack'
 
 import { SortContext } from '../../../../App'
@@ -22,7 +28,7 @@ const Menu = props => {
   }, [addedSort])
 
   return (
-    <MenuStyle>
+    <MenuWrapper>
       <CloseButton onClick={close} filter={filter}>
         {filter ? <ArrowBack /> : <Minus />}
       </CloseButton>
@@ -62,22 +68,27 @@ const Menu = props => {
           ))}
         </FilterStyle>
       ) : (
-        menuItems.map((item, i) => (
-          <NavLink
-            activeClassName="is-active"
-            key={i}
-            to={{
-              pathname: `/${item.url}`,
-              title: item.title,
-              subcategory: item.subcategory
-            }}
-            onClick={close}
-          >
-            {item.title}
+        <MenuStyle>
+          <NavLink to={'/about'} onClick={close}>
+            <h2>Om k-play</h2>
           </NavLink>
-        ))
+          {menuArray.map((item, i) => (
+            <NavLink
+              activeClassName="is-active"
+              key={i}
+              to={{
+                pathname: `/${item.url}`,
+                title: item.title,
+                subcategory: item.subcategory
+              }}
+              onClick={close}
+            >
+              {item.title}
+            </NavLink>
+          ))}
+        </MenuStyle>
       )}
-    </MenuStyle>
+    </MenuWrapper>
   )
 }
 

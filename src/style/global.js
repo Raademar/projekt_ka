@@ -24,7 +24,9 @@ h3 {
     font-weight: normal;
 }
 .is-active {
+    display: none;
     font-weight: bold;
+    background: red;
 }
 }
 `

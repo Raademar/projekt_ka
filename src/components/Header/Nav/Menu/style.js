@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const MenuStyle = styled.div`
+export const MenuWrapper = styled.div`
   background-color: ${props => props.theme.colors.darkgrey};
   position: fixed;
   top: 0;
@@ -11,7 +11,7 @@ export const MenuStyle = styled.div`
   position: absolute;
   width: 100%;
   height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: ${props => props.theme.fonts[0]};
   color: ${props => props.theme.colors.white[1]};
   padding: 20px;
   text-transform: uppercase;
@@ -26,6 +26,19 @@ export const MenuStyle = styled.div`
     margin-bottom: 12px;
     font-size: 24px;
     text-decoration: none;
+  }
+`
+
+export const MenuStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .is-active {
+    font-weight: bold;
   }
 `
 

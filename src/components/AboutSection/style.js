@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
   padding: 20px;
   color: white;
   background: ${props => props.theme.colors.lightgrey};
+  margin-bottom: 80px;
 
   div {
     padding: 40px 40px;

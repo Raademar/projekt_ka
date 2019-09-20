@@ -1,9 +1,5 @@
 export const menuItems = [
   {
-    title: 'Om K-play',
-    url: 'about'
-  },
-  {
     title: 'Teater',
     url: 'teater',
     image: './images/categories/teather.jpg',
