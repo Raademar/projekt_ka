@@ -45,7 +45,7 @@ export const MenuStyle = styled.div`
 export const FilterStyle = styled.div`
   display: flex;
   flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: ${props => props.theme.fonts[0]};
 
   h2 {
     margin-top: 43px;
