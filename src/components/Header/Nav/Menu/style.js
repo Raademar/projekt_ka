@@ -29,6 +29,32 @@ export const MenuStyle = styled.div`
   }
 `
 
+export const FilterStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+
+  h2 {
+    margin-top: 43px;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+`
+export const FilterButton = styled.button`
+  align-self: flex-start;
+  padding: 0;
+
+  h2 {
+    color: ${props => props.theme.colors.white[1]};
+    font-weight: ${props => props.added};
+    margin-bottom: 12px;
+    font-size: 24px;
+    text-decoration: none;
+    margin-top: 0;
+    text-transform: uppercase;
+  }
+`
+
 export const CloseButton = styled.button`
   align-self: ${props => (props.filter ? 'flex-start' : 'flex-end')};
   border: none;
