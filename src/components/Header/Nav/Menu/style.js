@@ -8,7 +8,6 @@ export const MenuWrapper = styled.div`
   z-index: 999;
   display: flex;
   flex-direction: column;
-  position: absolute;
   width: 100%;
   height: 100vh;
   font-family: ${props => props.theme.fonts[0]};
