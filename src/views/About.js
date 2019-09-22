@@ -8,7 +8,7 @@ import AboutSection from '../components/AboutSection'
 const About = props => {
   return (
     <>
-      <Layout history={props.history}>
+      <Layout history={props.history} noMargin="true">
         <AboutSection />
       </Layout>
     </>

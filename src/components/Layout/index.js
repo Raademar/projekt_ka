@@ -3,11 +3,11 @@ import { Wrapper } from './style'
 import Header from '../Header'
 import Footer from '../Footer'
 const Layout = props => {
-  const { active, history, children } = props
+  const { active, history, children, noMargin } = props
   return (
     <>
       <Header active={active} history={history}></Header>
-      <Wrapper>{children}</Wrapper>
+      <Wrapper noMargin={noMargin}>{children}</Wrapper>
       <Footer></Footer>
     </>
   )
