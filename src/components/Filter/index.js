@@ -17,7 +17,7 @@ const Filter = props => {
     }
   })
 
-  console.log(props)
+  // console.log(sort)
   return (
     <FilterWrapper addMargin={props.addMargin}>
       <h3>{sort}</h3>

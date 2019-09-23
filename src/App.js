@@ -15,6 +15,8 @@ export const SortContext = createContext(null)
 
 const App = ({ history, location }) => {
   const [sort, setSort] = useState('Populärt')
+  // console.log(sort)
+
   return (
     <Router onUpdate={() => window.scrollTo(0, 0)} history={history}>
       <ThemeProvider theme={theme}>
