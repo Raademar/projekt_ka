@@ -13,8 +13,18 @@ export const StyledVideoView = styled.div`
     height: 80px;
   }
 
+  .play-volume-holder {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      display: flex;
+      align-items: center;
+    }
+  }
+
   .sb-soundplayer-btn {
-    display: inline-block;
+    display: flex;
     background-color: transparent;
     color: #fc561e;
     font-size: 1em;
@@ -63,7 +73,7 @@ export const StyledVideoView = styled.div`
   }
   .sb-soundplayer-volume div {
     overflow: hidden;
-    width: 0;
+    /* width: 0; */
     -webkit-transition: width 0.2s ease-out;
     transition: width 0.2s ease-out;
     position: relative;

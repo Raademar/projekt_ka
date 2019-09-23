@@ -49,23 +49,30 @@ const VideoViewComponent = props => {
       )}
       {podView && (
         <div className="p1 mb3 mt1 flex flex-center bg-darken-1 red rounded">
-          <PlayButton
-            className="flex-none h4 button button-transparent button-grow rounded"
-            {...props}
-          />
-          <VolumeControl
-            className="flex flex-center mr2"
-            buttonClassName="flex-none h4 button button-transparent button-grow rounded"
-            {...props}
-          />
-          <h2 className="h5 nowrap caps flex-auto m0">
-            {track ? track.title : 'Loading...'}
-          </h2>
-          <Timer
-            className="h6 mr1"
-            duration={track ? track.duration / 1000 : 0}
-            {...props}
-          />
+          <img src="./images/recommended_videos/soundcloud_player.png" alt="" />
+          <div>
+            <p className="nowrap caps flex-auto m0">
+              {track ? track.title : 'Loading...'}
+            </p>
+          </div>
+          <div className="play-volume-holder">
+            <div>
+              <PlayButton
+                className="flex-none h4 button button-transparent button-grow rounded"
+                {...props}
+              />
+              <VolumeControl
+                className="flex flex-center mr2"
+                buttonClassName="flex-none h4 button button-transparent button-grow rounded"
+                {...props}
+              />
+            </div>
+            <Timer
+              className="h6 mr1"
+              duration={track ? track.duration / 1000 : 0}
+              {...props}
+            />
+          </div>
         </div>
       )}
       {/* <div className="share-btns">
