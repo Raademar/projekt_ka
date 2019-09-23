@@ -26,4 +26,23 @@ export const StyledThumbnailMedia = styled.div`
   p {
     margin: 0;
   }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  div div:first-of-type {
+    align-self: flex-start;
+  }
+
+  div div:last-of-type {
+    align-self: flex-end;
+    p {
+      margin: 0;
+    }
+  }
+
+
 `
