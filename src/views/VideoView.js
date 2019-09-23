@@ -15,6 +15,7 @@ const VideoView = props => {
   const { match } = props
   const { data } = useContext(DataContext)
   const [activeView, setActiveView] = useState(null)
+  const [mediaView, setMediaView] = useState(null)
 
   const content = data.filter(item => item.id.toString() === match.params.id)
 
@@ -22,15 +23,32 @@ const VideoView = props => {
     setActiveView(content)
   }, [])
 
+  useEffect(() => {
+    if (activeView !== null) {
+      getInfo()
+    }
+  })
+
+  const getInfo = () => {
+    if (activeView[0].type === 'video') {
+      setMediaView('videoView')
+    } else {
+      setMediaView('podView')
+    }
+  }
+
   return (
     <>
       <Layout history={props.history}>
-        <VideoViewComponent
-          activeView={activeView}
-          podView
-          clientId={clientId}
-          resolveUrl={resolveUrl}
-        />
+        {activeView && (
+          <VideoViewComponent
+            activeView={activeView}
+            podView={mediaView === 'podView'}
+            videoView={mediaView === 'videoView'}
+            clientId={clientId}
+            resolveUrl={resolveUrl}
+          />
+        )}
         <RecMedia />
       </Layout>
     </>

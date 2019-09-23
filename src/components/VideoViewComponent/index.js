@@ -10,9 +10,10 @@ import { PlayButton, Timer, VolumeControl } from 'react-soundplayer/components'
 import { withSoundCloudAudio } from 'react-soundplayer/addons'
 
 const VideoViewComponent = props => {
-  const { track, videoView, podView, activeView } = props
+  const { track, videoView, podView, activeView, mediaView } = props
   const kulturAkademinBG = './images/categories/teaather.jpg'
 
+  console.log(mediaView)
   const opts = {
     height: '191',
     width: '100%',
@@ -26,24 +27,6 @@ const VideoViewComponent = props => {
     // access to player in all event handlers via event.target
     event.target.pauseVideo()
   }
-  // ;<>
-  //   {activeView && (
-  //     <StyledVideoView>
-  //       <YouTube videoId="Nmf2V55mlgw" opts={opts} onReady={_onReady} />
-  //       <h3>{activeView[0].title}</h3>
-  //       <span>Längd: {activeView[0].length}</span>
-  //       <span>Datum: {activeView[0].date}</span>
-  //       <span>{activeView[0].type}</span>
-  //       <p>{activeView[0].description}</p>
-  //       <div>
-  //         <Facebook />
-  //         <Instagram />
-  //         <Twitter />
-  //         <LinkedIn />
-  //       </div>
-  //     </StyledVideoView>
-  //   )}
-  // </>
 
   return (
     <StyledVideoView>
@@ -52,14 +35,14 @@ const VideoViewComponent = props => {
           <YouTube videoId="Nmf2V55mlgw" opts={opts} onReady={_onReady} />
           <h3>{activeView[0].title}</h3>
           <span>Längd: {activeView[0].length}</span>
-          <span>Datum: {activeView[0].date}</span>
-          <span>Video</span>
+          <span> Datum: {activeView[0].date}</span>
+          <span> Video</span>
           <p>{activeView[0].description}</p>
         </div>
       )}
       {podView && (
         <div className="p1 mb3 mt1 flex flex-center bg-darken-1 red rounded">
-          <img src="./images/recommended_videos/soundcloud_player.png" alt="" />
+          <img src={activeView[0].thumbnail} alt="" />
           <div>
             <p className="nowrap caps flex-auto m0">
               {track ? track.title : 'Loading...'}
