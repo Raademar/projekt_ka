@@ -31,8 +31,6 @@ const SubcategoryPage = props => {
     setActiveData(content)
   }, [])
 
-  // console.log(activeData)
-
   return (
     <>
       <Layout history={props.history}>
