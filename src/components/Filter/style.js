@@ -5,4 +5,9 @@ export const FilterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
 `

@@ -2,13 +2,18 @@ import React, { useContext, useState, useEffect } from 'react'
 import FilterButton from '../icons/FilterButton'
 import { FilterWrapper } from './style'
 import Menu from '../Header/Nav/Menu'
+import pageData from '../../data/data.json'
 
-import { SortContext } from '../../App'
+import { SortContext, FilterContext, DataContext } from '../../App'
 
 const Filter = props => {
   const { location } = props
   const [filterOpen, setFilterOpen] = useState(false)
+
   const { sort, setSort } = useContext(SortContext)
+  const { data, updatePageData } = useContext(DataContext)
+  const { filterType, updateFilter } = useContext(FilterContext)
+
   const search = location.search.split('=')
 
   useEffect(() => {
@@ -17,11 +22,18 @@ const Filter = props => {
     }
   })
 
-  console.log(props)
   return (
     <FilterWrapper addMargin={props.addMargin}>
-      <h3>{sort}</h3>
-      <button onClick={() => setFilterOpen(true)}>
+      <div>
+        <h3>{sort}</h3>
+        <h5>{filterType}</h5>
+      </div>
+      <button
+        onClick={() => {
+          setFilterOpen(true)
+          updatePageData(pageData)
+        }}
+      >
         <FilterButton />
       </button>
 
