@@ -8,10 +8,10 @@ import Filter from '../components/Filter'
 const SearchResult = props => {
   return (
     <>
-      <Layout history={props.history}>
-        <Filter location={props.location}></Filter>
+      <Layout history={props.history} noMargin="true">
+        <Filter location={props.location} addMargin="true"></Filter>
+        <SrcResultsFilter />
       </Layout>
-      <SrcResultsFilter />
     </>
   )
 }
