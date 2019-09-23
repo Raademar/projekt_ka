@@ -6,7 +6,8 @@ import Instagram from '../icons/Instagram'
 import Twitter from '../icons/Twitter'
 import LinkedIn from '../icons/LinkedIn'
 
-const VideoViewComponent = ({ videoId, title, length, date, type, text }) => {
+const VideoViewComponent = props => {
+  const { videoId, date, type, text, activeView } = props
   const opts = {
     height: '100%',
     width: '100%',
@@ -22,26 +23,24 @@ const VideoViewComponent = ({ videoId, title, length, date, type, text }) => {
   }
 
   return (
-    <StyledVideoView>
-      <YouTube videoId="Nmf2V55mlgw" opts={opts} onReady={_onReady} />
-      <h3>Masterclass med Pia Olby - vad är sånggestaltning? (del 1 av 4)</h3>
-      <span>Längd: 1:40</span>
-      <span>Datum: 2019-05-29</span>
-      <span>Video</span>
-      <p>
-        Kulturakademin och Teateralliansens kurs i sånggestaltning erbjuder
-        professionella skådespelare möjlighet att arbeta med och utveckla sin
-        egen vokala och musikaliska potential – och att utmana sig själva
-        sångmässigt. Här förklarar kursledare Pia Olby begreppet
-        sånggestaltning.
-      </p>
-      <div>
-        <Facebook />
-        <Instagram />
-        <Twitter />
-        <LinkedIn />
-      </div>
-    </StyledVideoView>
+    <>
+      {activeView && (
+        <StyledVideoView>
+          <YouTube videoId="Nmf2V55mlgw" opts={opts} onReady={_onReady} />
+          <h3>{activeView[0].title}</h3>
+          <span>Längd: {activeView[0].length}</span>
+          <span>Datum: {activeView[0].date}</span>
+          <span>{activeView[0].type}</span>
+          <p>{activeView[0].description}</p>
+          <div>
+            <Facebook />
+            <Instagram />
+            <Twitter />
+            <LinkedIn />
+          </div>
+        </StyledVideoView>
+      )}
+    </>
   )
 }
 
