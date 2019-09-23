@@ -5,13 +5,12 @@ import Layout from '../components/Layout'
 import Footer from '../components/Footer'
 import AboutSection from '../components/AboutSection'
 
-const About = () => {
+const About = props => {
   return (
     <>
-      <Header></Header>
-
-      <AboutSection />
-      <Footer />
+      <Layout history={props.history} noMargin="true">
+        <AboutSection />
+      </Layout>
     </>
   )
 }

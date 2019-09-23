@@ -11,6 +11,11 @@ body {
     font-family: ${props => props.theme.fonts[1]};
 }
 
+button {
+    background-color: transparent;
+    border: 0;
+}
+
 p {
     margin: 20px 0;
     line-height: 124%;

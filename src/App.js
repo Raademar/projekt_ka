@@ -13,10 +13,10 @@ import SearchResult from './views/SearchResult'
 
 export const SortContext = createContext(null)
 
-const App = ({ history }) => {
+const App = ({ history, location }) => {
   const [sort, setSort] = useState('Populärt')
   return (
-    <Router history={history}>
+    <Router onUpdate={() => window.scrollTo(0, 0)} history={history}>
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyle />

@@ -6,11 +6,10 @@ import VideoViewComponent from '../components/VideoViewComponent'
 import RecMedia from '../components/RecMedia'
 import Footer from '../components/Footer'
 
-const VideoView = () => {
+const VideoView = props => {
   return (
     <>
-      <Header></Header>
-      <Layout>
+      <Layout history={props.history}>
         <VideoViewComponent />
         <RecMedia />
       </Layout>

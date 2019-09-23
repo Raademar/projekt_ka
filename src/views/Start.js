@@ -11,13 +11,11 @@ import ThumbnailMedia from '../components/ThumbnailMedia'
 const Start = props => {
   return (
     <>
-      <Header></Header>
-      <Layout>
+      <Layout history={props.history}>
         <CategoryFilter array={menuArray} pathName={props.location.pathname} />
         <Filter location={props.location} />
         <ThumbnailMedia color="white"></ThumbnailMedia>
       </Layout>
-      <Footer />
     </>
   )
 }
