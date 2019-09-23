@@ -23,6 +23,11 @@ export const StyledVideoView = styled.div`
     }
   }
 
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+
   .sb-soundplayer-btn {
     display: flex;
     background-color: transparent;

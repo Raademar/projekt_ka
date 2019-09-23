@@ -8,4 +8,14 @@ export const StyledFeaturedClip = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  img {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+  }
+
+  p {
+    margin: 0;
+  }
 `

@@ -7,10 +7,12 @@ export const StyledThumbnailMedia = styled.div`
   /* background: ${props => props.theme.colors.lightgrey}; */
   padding: ${props => (props.color ? '0' : '20px')};
   flex-direction: column;
+  margin-bottom: 20px;
 
   img {
     width: 100%;
     height: 170px;
+    object-fit: contain;
   }
 
   h2 {
@@ -24,4 +26,23 @@ export const StyledThumbnailMedia = styled.div`
   p {
     margin: 0;
   }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  div div:first-of-type {
+    align-self: flex-start;
+  }
+
+  div div:last-of-type {
+    align-self: flex-end;
+    p {
+      margin: 0;
+    }
+  }
+
+
 `
