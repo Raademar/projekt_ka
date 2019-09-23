@@ -30,14 +30,18 @@ const ArrayOfClips = [
   }
 ]
 
-const FeaturedClipList = () => {
+const FeaturedClipList = props => {
+  const { news } = props
+
+  console.log(news)
+
   return (
     <StyledFeaturedClipList>
-      {ArrayOfClips.map((clip, index) => (
+      {news.map((clip, index) => (
         <FeaturedClip
-          image={clip.image}
-          text={clip.text}
-          link={clip.link}
+          image={clip.thumbnail}
+          text={clip.title}
+          link={`/video/${clip.id}`}
           key={index}
         />
       ))}

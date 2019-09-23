@@ -10,9 +10,10 @@ import { PlayButton, Timer, VolumeControl } from 'react-soundplayer/components'
 import { withSoundCloudAudio } from 'react-soundplayer/addons'
 
 const VideoViewComponent = props => {
-  const { track, videoView, podView } = props
+  const { track, videoView, podView, activeView, mediaView } = props
   const kulturAkademinBG = './images/categories/teaather.jpg'
 
+  console.log(mediaView)
   const opts = {
     height: '191',
     width: '100%',
@@ -32,24 +33,16 @@ const VideoViewComponent = props => {
       {videoView && (
         <div>
           <YouTube videoId="Nmf2V55mlgw" opts={opts} onReady={_onReady} />
-          <h3>
-            Masterclass med Pia Olby - vad är sånggestaltning? (del 1 av 4)
-          </h3>
-          <span>Längd: 1:40</span>
-          <span>Datum: 2019-05-29</span>
-          <span>Video</span>
-          <p>
-            Kulturakademin och Teateralliansens kurs i sånggestaltning erbjuder
-            professionella skådespelare möjlighet att arbeta med och utveckla
-            sin egen vokala och musikaliska potential – och att utmana sig
-            själva sångmässigt. Här förklarar kursledare Pia Olby begreppet
-            sånggestaltning.
-          </p>
+          <h3>{activeView[0].title}</h3>
+          <span>Längd: {activeView[0].length}</span>
+          <span> Datum: {activeView[0].date}</span>
+          <span> Video</span>
+          <p>{activeView[0].description}</p>
         </div>
       )}
       {podView && (
         <div className="p1 mb3 mt1 flex flex-center bg-darken-1 red rounded">
-          <img src="./images/recommended_videos/soundcloud_player.png" alt="" />
+          <img src={activeView[0].thumbnail} alt="" />
           <div>
             <p className="nowrap caps flex-auto m0">
               {track ? track.title : 'Loading...'}
