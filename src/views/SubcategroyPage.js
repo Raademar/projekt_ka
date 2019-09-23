@@ -9,7 +9,6 @@ import { DataContext } from '../App'
 const SubcategoryPage = props => {
   const { data } = useContext(DataContext)
   const [activeData, setActiveData] = useState(null)
-  const [loaded, setLoaded] = useState(false)
 
   const category = menuArray.filter(
     item => item.url === props.match.params.category
@@ -19,18 +18,18 @@ const SubcategoryPage = props => {
     item => item.url === props.match.params.subcategory
   )
 
-  // const content = data.filter(item => {
-  //   if (
-  //     item.tags.includes(category[0].title) &&
-  //     item.subcategory.includes(subcategory[0].title)
-  //   ) {
-  //     return item
-  //   }
-  // })
+  const content = data.filter(item => {
+    if (
+      item.tags.includes(category[0].title) &&
+      item.subcategory.includes(subcategory[0].title)
+    ) {
+      return item
+    }
+  })
 
-  // useEffect(() => {
-  //   setActiveData(content)
-  // }, [loaded])
+  useEffect(() => {
+    setActiveData(content)
+  }, [])
 
   // console.log(activeData)
 

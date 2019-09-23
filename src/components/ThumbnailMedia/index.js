@@ -5,13 +5,18 @@ const ThumbnailMedia = props => {
   console.log(content)
 
   return (
-    <StyledThumbnailMedia color={props.color}>
-      <img src="https://images.unsplash.com/photo-1562185022-c0a7889d7fbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" />
-      <h2>Rubrik</h2>
-      <p>Längd:</p>
-      <p>Datum:</p>
-      <p>Format</p>
-    </StyledThumbnailMedia>
+    <>
+      {content &&
+        content.map(info => (
+          <StyledThumbnailMedia color={props.color}>
+            <img src="ttps://images.unsplash.com/photo-15cHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" />
+            <h2>{info.title}</h2>
+            <p>{info.length}</p>
+            <p>{info.date}</p>
+            <p>{info.type}</p>
+          </StyledThumbnailMedia>
+        ))}
+    </>
   )
 }
 

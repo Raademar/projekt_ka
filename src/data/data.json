@@ -42,7 +42,7 @@
   "subcategory": ["Senckonst", "Koreografi"],
   "streamUrl": "https://api.soundcloud.com/tracks/642376728/stream",
   "trackUrl": "https://soundcloud.com/user-994747535/129-eeva-bolin-nya-organisation-for-kultur-i-grundskola-och-forskola",
-  "duration": 370110,
+  "length": "6:16",
   "thumbnail": "https://i1.sndcdn.com/artworks-000557759277-nwur66-large.jpg",
   "playlistId": null,
   "type": "podcast"
@@ -54,7 +54,7 @@
   "subcategory": ["Scenkonst", "Manus & Storytelling"],
   "streamUrl": "https://api.soundcloud.com/tracks/642375006/stream",
   "trackUrl": "https://soundcloud.com/user-994747535/128-asa-jansson-regionala-arrangorsstodet-for-barn-unga-kulturkatalogen-vast",
-  "duration": 486105,
+  "length": "8:10",
   "thumbnail": "https://i1.sndcdn.com/artworks-000557757795-foa5ie-large.jpg",
   "playlistId": null,
   "type": "podcast"
@@ -66,7 +66,7 @@
   "subcategory": ["Scenkonst", "Manus & Storytelling"],
   "streamUrl": "https://api.soundcloud.com/tracks/639016008/stream",
   "trackUrl": "https://soundcloud.com/user-994747535/124-fading-lights-the-transition-from-candle-to-led-with-chris-van-goethem-live-2019-05-06",
-  "duration": 9102070,
+  "length": 9102070,
   "thumbnail": "https://i1.sndcdn.com/artworks-000554510037-rxwixc-large.jpg",
   "playlistId": null,
   "type": "podcast"
@@ -78,7 +78,7 @@
   "subcategory": ["Musicerande", "Komposition", "Scenteknik", "Digital teknik"],
   "streamUrl": "https://api.soundcloud.com/tracks/638544057/stream",
   "trackUrl": "https://soundcloud.com/user-994747535/122-nordic-stage-nordisk-dramatik-i-usa-live-2019-05-18",
-  "duration": 2685456,
+  "length": 2685456,
   "thumbnail": "https://i1.sndcdn.com/artworks-000553944333-b8a1vt-large.jpg",
   "playlistId": null,
   "type": "podcast"
@@ -90,7 +90,7 @@
   "subcategory": ["Sång", "Komposition", "Scenteknik", "Digital teknik"],
   "streamUrl": "https://api.soundcloud.com/tracks/638502162/stream",
   "trackUrl": "https://soundcloud.com/user-994747535/121-danslyftet-inbjudan-till-samtal-om-den-fria-danssektorn-live-2019-05-18",
-  "duration": 2998980,
+  "length": 2998980,
   "thumbnail": "https://i1.sndcdn.com/artworks-000553882203-ws155w-large.jpg",
   "playlistId": null,
   "type": "podcast"
@@ -102,7 +102,7 @@
   "subcategory": ["Sång", "Komposition", "Koreografi", "Scenkonst"],
   "streamUrl": "https://api.soundcloud.com/tracks/638490987/stream",
   "trackUrl": "https://soundcloud.com/user-994747535/120-fran-scen-till-skarm-i-overforing-fran-scenkonst-till-filmmediet-live-2019-05-18",
-  "duration": 2969486,
+  "length": 2969486,
   "thumbnail": "https://i1.sndcdn.com/artworks-000553871100-l8f668-large.jpg",
   "playlistId": null,
   "type": "podcast"
@@ -114,7 +114,7 @@
   "subcategory": ["Sång", "Komposition"],
   "streamUrl": "https://api.soundcloud.com/tracks/638476188/stream",
   "trackUrl": "https://soundcloud.com/user-994747535/119-flersprakig-scenkonst-konstnarliga-mojligheter-och-utmaningar-live-2019-05-18",
-  "duration": 2416421,
+  "length": 2416421,
   "thumbnail": "https://i1.sndcdn.com/artworks-000553850328-6ej8wr-large.jpg",
   "playlistId": null,
   "type": "podcast"
@@ -126,7 +126,7 @@
   "subcategory": ["Sång", "Komposition"],
   "streamUrl": "https://api.soundcloud.com/tracks/638471079/stream",
   "trackUrl": "https://soundcloud.com/user-994747535/118-nar-vi-traffade-varann-och-gjorde-en-pjas-ihop-live-2019-05-17",
-  "duration": 2708446,
+  "length": 2708446,
   "thumbnail": "https://i1.sndcdn.com/artworks-000553835862-4pmb5c-large.jpg",
   "playlistId": null,
   "type": "podcast"
@@ -138,7 +138,7 @@
   "subcategory": ["Sång", "Komposition"],
   "streamUrl": "https://api.soundcloud.com/tracks/638463954/stream",
   "trackUrl": "https://soundcloud.com/user-994747535/117-konstnarsnamnden-information-om-stipendier-och-bidrag-live-2019-05-17",
-  "duration": 2541951,
+  "length": 2541951,
   "thumbnail": "https://i1.sndcdn.com/artworks-000553823763-d6ld0i-large.jpg",
   "playlistId": null,
   "type": "podcast"
@@ -150,7 +150,7 @@
   "subcategory": ["Sång", "Komposition"],
   "streamUrl": "https://api.soundcloud.com/tracks/635538729/stream",
   "trackUrl": "https://soundcloud.com/user-994747535/116-panelsamtal-gransoverskridande-samarbeten-i-praktiken-sa-funkar-det-live-2019-05-17",
-  "duration": 706626,
+  "length": 706626,
   "thumbnail": "https://i1.sndcdn.com/artworks-000550850193-0si9gh-large.jpg",
   "playlistId": null,
   "type": "podcast"
@@ -162,7 +162,7 @@
   "subcategory": ["Bildkonst", "Ljussättning", "Fotografi"],
   "streamUrl": "https://api.soundcloud.com/tracks/634412535/stream",
   "trackUrl": "https://soundcloud.com/user-994747535/110-do-i-really-need-a-dramaturg-introduction-into-dance-dramaturgy-live-2019-05-17",
-  "duration": 4508633,
+  "length": 4508633,
   "thumbnail": "https://i1.sndcdn.com/artworks-000553091940-tjn7hx-large.jpg",
   "playlistId": null,
   "type": "podcast"

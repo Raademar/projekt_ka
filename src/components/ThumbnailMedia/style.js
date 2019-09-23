@@ -7,6 +7,7 @@ export const StyledThumbnailMedia = styled.div`
   /* background: ${props => props.theme.colors.lightgrey}; */
   padding: ${props => (props.color ? '0' : '20px')};
   flex-direction: column;
+  margin-bottom: 20px;
 
   img {
     width: 100%;
