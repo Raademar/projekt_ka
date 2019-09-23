@@ -9,7 +9,7 @@ const ThumbnailMedia = props => {
       {content &&
         content.map(info => (
           <StyledThumbnailMedia color={props.color}>
-            <img src="ttps://images.unsplash.com/photo-15cHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" />
+            <img src={info.thumbnail} />
             <h2>{info.title}</h2>
             <p>{info.length}</p>
             <p>{info.date}</p>
