@@ -15,7 +15,17 @@ const ArrayOfClips = [
   },
   {
     text: 'Nominated writers',
-    image: './images/categories/nominated_writers_2.png',
+    image: './images/categories/nominated_writers.png',
+    link: '/video/3'
+  },
+  {
+    text: 'Nominated writers',
+    image: './images/categories/nominated_writers.png',
+    link: '/video/3'
+  },
+  {
+    text: 'Nominated writers',
+    image: './images/categories/nominated_writers.png',
     link: '/video/3'
   }
 ]

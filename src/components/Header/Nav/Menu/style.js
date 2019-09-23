@@ -1,42 +1,81 @@
 import styled from 'styled-components'
 
-export const MenuStyle = styled.div`
+export const MenuWrapper = styled.div`
   background-color: ${props => props.theme.colors.darkgrey};
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 999;
   display: flex;
   flex-direction: column;
-  position: absolute;
   width: 100%;
   height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: ${props => props.theme.fonts[0]};
   color: ${props => props.theme.colors.white[1]};
   padding: 20px;
   text-transform: uppercase;
 
   a:first-of-type {
-    font-weight: bold;
     margin-top: 43px;
     margin-bottom: 40px;
   }
 
   a {
     color: ${props => props.theme.colors.white[1]};
-    font-weight: normal;
     margin-bottom: 12px;
     font-size: 24px;
     text-decoration: none;
   }
 `
 
+export const MenuStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .is-active {
+    font-weight: bold;
+  }
+`
+
+export const FilterStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-family: ${props => props.theme.fonts[0]};
+
+  h2 {
+    margin-top: 43px;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+`
+export const FilterButton = styled.button`
+  align-self: flex-start;
+  padding: 0;
+
+  h2 {
+    color: ${props => props.theme.colors.white[1]};
+    font-weight: ${props => props.added};
+    margin-bottom: 12px;
+    font-size: 24px;
+    text-decoration: none;
+    margin-top: 0;
+    text-transform: uppercase;
+  }
+`
+
 export const CloseButton = styled.button`
-  align-self: flex-end;
+  align-self: ${props => (props.filter ? 'flex-start' : 'flex-end')};
   border: none;
   width: fit-content;
   background: none;
   outline: 0;
   padding: 0;
+
+  margin-top: ${props => (props.filter ? '9px' : '0')};
 
   svg {
     align-self: center;

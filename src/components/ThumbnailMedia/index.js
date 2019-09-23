@@ -1,20 +1,14 @@
 import React from 'react'
 import { StyledThumbnailMedia } from './style'
 
-const ThumbnailMedia = () => {
+const ThumbnailMedia = props => {
   return (
-    <StyledThumbnailMedia>
-      <img
-        src="./images/recommended_videos/thumbnail_rec_video.png"
-        alt="thumbnail_image_recommended_videos"
-      />
-      <h3>
-        Masterclass med Pia Olby - textgestaltning och sånggestaltning (del 2 av
-        4)
-      </h3>
-      <span>Längd: 2:40</span>
-      <span>Datum: 2019-06-10</span>
-      <span>Video</span>
+    <StyledThumbnailMedia color={props.color}>
+      <img src="https://images.unsplash.com/photo-1562185022-c0a7889d7fbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" />
+      <h2>Rubrik</h2>
+      <p>Längd:</p>
+      <p>Datum:</p>
+      <p>Format</p>
     </StyledThumbnailMedia>
   )
 }
