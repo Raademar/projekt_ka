@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyledThumbnailMedia } from './style'
+
 const ThumbnailMedia = props => {
   return (
     <StyledThumbnailMedia color={props.color}>

@@ -6,11 +6,19 @@ import VideoViewComponent from '../components/VideoViewComponent'
 import RecMedia from '../components/RecMedia'
 import Footer from '../components/Footer'
 
+const clientId = '45ca7c7c9b41fdcb2501bb7dd27e168b'
+const resolveUrl =
+  'https://soundcloud.com/user-994747535/130-adaptionsseminarium-aniara-fran-bok-till-film-med-pella-kagerman-och-hugo-lilja'
+
 const VideoView = props => {
   return (
     <>
       <Layout history={props.history}>
-        <VideoViewComponent />
+        <VideoViewComponent 
+          podView
+          clientId={clientId}
+          resolveUrl={resolveUrl}
+        />
         <RecMedia />
       </Layout>
       <Footer />
