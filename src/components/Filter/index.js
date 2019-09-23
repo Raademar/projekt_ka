@@ -17,9 +17,9 @@ const Filter = props => {
     }
   })
 
-  console.log(sort)
+  console.log(props)
   return (
-    <FilterWrapper>
+    <FilterWrapper addMargin={props.addMargin}>
       <h3>{sort}</h3>
       <button onClick={() => setFilterOpen(true)}>
         <FilterButton />
