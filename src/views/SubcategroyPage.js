@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import Layout from '../components/Layout'
 import Header from '../components/Header'
 import ThumbnailMedia from '../components/ThumbnailMedia'
 import ResultPageTitle from '../components/ResultPageTitle'
 import { menuArray } from '../data/menuArray'
+import { DataContext } from '../App'
 
 const SubcategoryPage = props => {
+  const { data } = useContext(DataContext)
+  const [activeData, setActiveData] = useState(null)
+  const [loaded, setLoaded] = useState(false)
+
   const category = menuArray.filter(
     item => item.url === props.match.params.category
   )
@@ -14,6 +19,21 @@ const SubcategoryPage = props => {
     item => item.url === props.match.params.subcategory
   )
 
+  // const content = data.filter(item => {
+  //   if (
+  //     item.tags.includes(category[0].title) &&
+  //     item.subcategory.includes(subcategory[0].title)
+  //   ) {
+  //     return item
+  //   }
+  // })
+
+  // useEffect(() => {
+  //   setActiveData(content)
+  // }, [loaded])
+
+  // console.log(activeData)
+
   return (
     <>
       <Layout history={props.history}>
@@ -21,7 +41,7 @@ const SubcategoryPage = props => {
           title={category[0].title}
           subtitle={subcategory[0].title}
         />
-        <ThumbnailMedia></ThumbnailMedia>
+        <ThumbnailMedia content={activeData}></ThumbnailMedia>
       </Layout>
     </>
   )
