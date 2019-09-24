@@ -4,7 +4,7 @@ import { StyledSrcResultCard } from './style'
 const SrcResultCard = () => {
   return (
     <StyledSrcResultCard>
-      <img src="./images/categories/bidragstipendier.jpg" />
+      <img loading="lazy" src="./images/categories/bidragstipendier.jpg" />
       <h5>
         KULTURAKADEMIN PODCAST #126 SFI & Film i Väst – filmfinansieringens
         möjligheter & utmaningar

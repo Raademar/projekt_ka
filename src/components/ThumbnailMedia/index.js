@@ -11,7 +11,7 @@ const ThumbnailMedia = props => {
       {content &&
         content.map((info, i) => (
           <StyledThumbnailMedia color={props.color} key={i}>
-            <img src={info.thumbnail} />
+            <img loading="lazy" src={info.thumbnail} />
             <h2>{info.title}</h2>
             <div>
               <div>
