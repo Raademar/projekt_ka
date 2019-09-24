@@ -10,7 +10,12 @@ import {
 import Minus from '../../../icons/Minus'
 import { menuArray } from '../../../../data/menuArray'
 import ArrowBack from '../../../icons/ArrowBack'
-import { SortContext, FilterContext, DataContext } from '../../../../App'
+import {
+  SortContext,
+  FilterContext,
+  DataContext,
+  FilteredDataContext
+} from '../../../../App'
 import pageData from '../../../../data/data.json'
 
 const filterItems = ['Video', 'Podcast']
@@ -22,27 +27,29 @@ const Menu = props => {
   const { data, updatePageData } = useContext(DataContext)
   const { sort, setSort } = useContext(SortContext)
   const { filterType, updateFilter } = useContext(FilterContext)
+  const { filteredData, updateFilteredData } = useContext(FilteredDataContext)
+
   const [filterTypeString, setFilterType] = useState(filterType)
   const [addedFilter, setAddedFilter] = useState(null)
   const [addedSort, setAddedSort] = useState(sort)
-  let tempData = []
 
   useEffect(() => {
     setSort(addedSort)
     updateFilter(filterTypeString)
+    filterData()
+  }, [addedSort, filterTypeString, addedFilter])
+
+  const filterData = () => {
+    let filteredData = data
+    let tempData
     if (filterTypeString !== '') {
-      tempData = data.filter(item => {
+      tempData = filteredData.filter(item => {
         if (item.type.toLowerCase() == filterTypeString.toLowerCase()) {
           return item
         }
       })
-      updatePageData(tempData)
+      updateFilteredData(tempData)
     }
-  }, [addedSort, filterTypeString])
-
-  if (filterTypeString !== '') {
-    updatePageData(pageData)
-    setFilterType('')
   }
 
   return (
@@ -57,11 +64,11 @@ const Menu = props => {
           {filterItems.map((item, i) => (
             <FilterButton
               key={i}
-              onClick={() =>
+              onClick={() => {
                 addedFilter !== null
                   ? setAddedFilter(null)
                   : setAddedFilter(item)
-              }
+              }}
               activeFilter={item}
               added={addedFilter === item ? 'bold' : 'normal'}
             >

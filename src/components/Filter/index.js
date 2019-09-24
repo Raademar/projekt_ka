@@ -31,7 +31,6 @@ const Filter = props => {
       <button
         onClick={() => {
           setFilterOpen(true)
-          updatePageData(pageData)
         }}
       >
         <FilterButton />
