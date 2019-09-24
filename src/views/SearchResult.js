@@ -1,8 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 
-import Footer from '../components/Footer'
 import SrcResultsFilter from '../components/SrcResultsFilter'
-import Header from '../components/Header'
 import Layout from '../components/Layout'
 import Filter from '../components/Filter'
 import { DataContext } from '../App'
@@ -10,7 +8,7 @@ import { DataContext } from '../App'
 const SearchResult = props => {
   const { location } = props
   let searchWord = location.search.split('?')
-  const { data, setData } = useContext(DataContext)
+  const { data } = useContext(DataContext)
   const [searchResults, setSearchResults] = useState([])
   const [query, setQuery] = useState(searchWord[1])
 
@@ -36,10 +34,6 @@ const SearchResult = props => {
   useEffect(() => {
     setSearchResults(searchQuery(data))
   }, [query])
-
-  if (searchResults.length == 0) {
-    console.log('nothing')
-  }
 
   return (
     <>
