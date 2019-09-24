@@ -20,13 +20,26 @@ const SearchResult = props => {
   })
 
   const searchQuery = data => {
-    return data.filter(
+    let resultTitle = data.filter(
       m => m.title.toLowerCase().indexOf(query.toLowerCase()) >= 0
     )
+
+    let resultDescription = data.filter(
+      m => m.description.toLowerCase().indexOf(query.toLowerCase()) >= 0
+    )
+
+    let resutlts = resultTitle.concat(resultDescription)
+    resutlts = [...new Set(resutlts)]
+
+    return resutlts
   }
   useEffect(() => {
     setSearchResults(searchQuery(data))
   }, [query])
+
+  if (searchResults.length == 0) {
+    console.log('nothing')
+  }
 
   return (
     <>
