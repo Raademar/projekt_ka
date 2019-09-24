@@ -28,20 +28,20 @@ export const StyledThumbnailMedia = styled.div`
   }
 
   div {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  div div:first-of-type {
+  div div {
     align-self: flex-start;
+
   }
 
-  div div:last-of-type {
+  div a:last-of-type {
+    margin-top: -30px;
     align-self: flex-end;
-    p {
-      margin: 0;
-    }
   }
 
 
