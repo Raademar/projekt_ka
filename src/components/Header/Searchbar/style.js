@@ -10,7 +10,9 @@ export const SearchbarStyled = styled.div`
   background: #fff;
   z-index: 1;
   /* padding-bottom: 20px; */
-
+  a {
+    text-decoration: none;
+  }
   form {
     width: 100%;
     display: flex;
@@ -18,6 +20,7 @@ export const SearchbarStyled = styled.div`
     height: 6vh;
   }
   button {
+    height: 44px;
     position: relative;
     right: 1px;
     background-color: #d0843c;

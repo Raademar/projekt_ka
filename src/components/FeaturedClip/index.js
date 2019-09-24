@@ -6,7 +6,7 @@ const FeaturedClip = props => {
   return (
     <StyledFeaturedClip>
       <NavLink to={props.link}>
-        <img src={props.image} alt="thumbnail_from_video" />
+        <img loading="lazy" src={props.image} alt="thumbnail_from_video" />
         <p>{props.text.substr(0, 50)}...</p>
       </NavLink>
     </StyledFeaturedClip>
