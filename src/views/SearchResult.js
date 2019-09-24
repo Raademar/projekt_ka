@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
 import Footer from '../components/Footer'
 import SrcResultsFilter from '../components/SrcResultsFilter'
@@ -9,32 +9,30 @@ import { DataContext } from '../App'
 
 const SearchResult = props => {
   const { location } = props
+  let searchWord = location.search.split('?')
   const { data, setData } = useContext(DataContext)
-  const searchWord = location.search.split('?')
+  const [searchResults, setSearchResults] = useState([])
+  const [query, setQuery] = useState(searchWord[1])
 
-  // const searchQuery = data => {
-  //   return data.filter(
-  //     m => m.title.toLowerCase().indexOf(searchWord[0].toLowerCase()) >= 0
-  //   )
-  // }
+  useEffect(() => {
+    searchWord = location.search.split('?')
+    setQuery(searchWord[1])
+  })
+
   const searchQuery = data => {
-    return data.filter(m =>
-      console.log(
-        m.title.toLowerCase().indexOf(searchWord[1].toLowerCase()) >= 0
-      )
+    return data.filter(
+      m => m.title.toLowerCase().indexOf(query.toLowerCase()) >= 0
     )
   }
-
-  console.log(searchQuery(data))
-  // const filter = data.map(item => item.title.search(searchWord[1]))
-  // const filterSearch = data.find(item => item.title === searchWord[1])
-  // console.log(filterSearch)
+  useEffect(() => {
+    setSearchResults(searchQuery(data))
+  }, [query])
 
   return (
     <>
       <Layout history={props.history} noMargin="true">
         <Filter location={props.location} addMargin="true"></Filter>
-        <SrcResultsFilter />
+        <SrcResultsFilter searchResults={searchResults} />
       </Layout>
     </>
   )

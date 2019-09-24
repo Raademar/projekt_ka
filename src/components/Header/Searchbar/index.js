@@ -28,14 +28,14 @@ const Searchbar = props => {
   console.log(inputValue)
   return (
     <SearchbarStyled scroll={visible}>
-      <NavLink to={`/search?${inputValue}`}>
-        <form onSubmit={() => setInputValue(inputValue)}>
-          <Input onChange={handleInputValue} value={inputValue} />
+      <form onSubmit={() => setInputValue(inputValue)}>
+        <Input onChange={handleInputValue} value={inputValue} />
+        <NavLink to={`/search?${inputValue}`}>
           <button>
             <Search />
           </button>
-        </form>
-      </NavLink>
+        </NavLink>
+      </form>
     </SearchbarStyled>
   )
 }

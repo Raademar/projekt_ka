@@ -20,6 +20,7 @@ export const SearchbarStyled = styled.div`
     height: 6vh;
   }
   button {
+    height: 44px;
     position: relative;
     right: 1px;
     background-color: #d0843c;
