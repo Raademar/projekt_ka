@@ -25,7 +25,6 @@ const Searchbar = props => {
     console.log(e.target.value)
   }
 
-  console.log(inputValue)
   return (
     <SearchbarStyled scroll={visible}>
       <form onSubmit={() => setInputValue(inputValue)}>

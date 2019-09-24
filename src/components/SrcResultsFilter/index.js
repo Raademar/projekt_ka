@@ -5,7 +5,6 @@ import Filter from '../Filter'
 const SrcResultFilter = props => {
   const { searchResults } = props
 
-  console.log(searchResults)
   return (
     <Wrapper>
       {searchResults.map((result, i) => (
