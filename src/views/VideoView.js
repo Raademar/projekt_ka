@@ -19,6 +19,8 @@ const VideoView = props => {
 
   const content = data.filter(item => item.id.toString() === match.params.id)
 
+  // console.log(content)
+
   useEffect(() => {
     setActiveView(content)
   }, [])
@@ -49,7 +51,7 @@ const VideoView = props => {
             resolveUrl={resolveUrl}
           />
         )}
-        <RecMedia />
+        <RecMedia content={content} />
       </Layout>
     </>
   )
