@@ -50,7 +50,7 @@ const App = ({ history, location }) => {
                   <Route exact path="/" component={Start}></Route>
                   <Route exact path="/search" component={SearchResult}></Route>
                   <Route exact path="/about" component={About}></Route>
-                  <Route exact path="/video/:id" component={VideoView}></Route>
+                  <Route exact path="/media/:id" component={VideoView}></Route>
                   <Route
                     exact
                     path="/:category/:subcategory"

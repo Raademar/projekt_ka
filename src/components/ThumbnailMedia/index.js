@@ -19,7 +19,7 @@ const ThumbnailMedia = props => {
                 <p>{info.date}</p>
                 <p>{info.type}</p>
               </div>
-              <NavLink to={`/video/${info.id}`}>
+              <NavLink to={`/media/${info.id}`}>
                 <ArrowBack color="darkgrey" flip />
               </NavLink>
             </div>
