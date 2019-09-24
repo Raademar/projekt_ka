@@ -46,10 +46,10 @@ const App = ({ history, location }) => {
             <FilterContext.Provider value={{ filterType, updateFilter }}>
               <DataContext.Provider value={{ data, updatePageData }}>
                 <Switch>
+                  <Route exact path="/search" component={SearchResult}></Route>
                   <Route path="?q=filter" component={Start}></Route>
                   <Route exact path="/" component={Start}></Route>
                   <Route exact path="/about" component={About}></Route>
-                  <Route exact path="/search" component={SearchResult}></Route>
                   <Route exact path="/video" component={VideoView}></Route>
                   <Route
                     exact

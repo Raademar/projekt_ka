@@ -10,7 +10,9 @@ export const SearchbarStyled = styled.div`
   background: #fff;
   z-index: 1;
   /* padding-bottom: 20px; */
-
+  a {
+    text-decoration: none;
+  }
   form {
     width: 100%;
     display: flex;

@@ -6,6 +6,7 @@ import Header from '../components/Header'
 import Layout from '../components/Layout'
 import Filter from '../components/Filter'
 const SearchResult = props => {
+  console.log(props)
   return (
     <>
       <Layout history={props.history} noMargin="true">

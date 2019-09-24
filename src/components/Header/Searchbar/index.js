@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Input, SearchbarStyled } from './style'
+import { NavLink } from 'react-router-dom'
 import Search from '../../icons/Search'
-const Searchbar = () => {
+const Searchbar = props => {
   const [position, setPosition] = useState(window.pageYOffset)
   const [visible, setVisible] = useState(true)
+  const [inputValue, setInputValue] = useState('')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,14 +19,23 @@ const Searchbar = () => {
       window.removeEventListener('scroll', handleScroll)
     }
   })
+
+  const handleInputValue = e => {
+    setInputValue(e.target.value)
+    console.log(e.target.value)
+  }
+
+  console.log(inputValue)
   return (
     <SearchbarStyled scroll={visible}>
-      <form>
-        <Input />
-        <button>
-          <Search />
-        </button>
-      </form>
+      <NavLink to={`/search?${inputValue}`}>
+        <form onSubmit={() => setInputValue(inputValue)}>
+          <Input onChange={handleInputValue} value={inputValue} />
+          <button>
+            <Search />
+          </button>
+        </form>
+      </NavLink>
     </SearchbarStyled>
   )
 }
