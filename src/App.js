@@ -15,10 +15,12 @@ import pageData from './data/data.json'
 export const SortContext = createContext(null)
 export const DataContext = createContext(null)
 export const FilterContext = createContext(null)
+export const FilteredDataContext = createContext(null)
 
 const App = ({ history, location }) => {
   const [sort, setSort] = useState('Populärt')
   const [data, updatePageData] = useState(pageData)
+  const [filteredData, updateFilteredData] = useState(data)
   const [filterType, updateFilter] = useState('')
 
   if (sort === 'Tidigast först') {
@@ -45,23 +47,35 @@ const App = ({ history, location }) => {
           <SortContext.Provider value={{ sort, setSort }}>
             <FilterContext.Provider value={{ filterType, updateFilter }}>
               <DataContext.Provider value={{ data, updatePageData }}>
-                <Switch>
-                  <Route path="?q=filter" component={Start}></Route>
-                  <Route exact path="/" component={Start}></Route>
-                  <Route exact path="/about" component={About}></Route>
-                  <Route exact path="/search" component={SearchResult}></Route>
-                  <Route exact path="/video/:id" component={VideoView}></Route>
-                  <Route
-                    exact
-                    path="/:category/:subcategory"
-                    component={SubcategoryPage}
-                  ></Route>
-                  <Route
-                    exact
-                    path="/:category"
-                    component={CategoryPage}
-                  ></Route>
-                </Switch>
+                <FilteredDataContext.Provider
+                  value={{ filteredData, updateFilteredData }}
+                >
+                  <Switch>
+                    <Route path="?q=filter" component={Start}></Route>
+                    <Route exact path="/" component={Start}></Route>
+                    <Route exact path="/about" component={About}></Route>
+                    <Route
+                      exact
+                      path="/search"
+                      component={SearchResult}
+                    ></Route>
+                    <Route
+                      exact
+                      path="/video/:id"
+                      component={VideoView}
+                    ></Route>
+                    <Route
+                      exact
+                      path="/:category/:subcategory"
+                      component={SubcategoryPage}
+                    ></Route>
+                    <Route
+                      exact
+                      path="/:category"
+                      component={CategoryPage}
+                    ></Route>
+                  </Switch>
+                </FilteredDataContext.Provider>
               </DataContext.Provider>
             </FilterContext.Provider>
           </SortContext.Provider>
