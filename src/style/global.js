@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
 body {
     background: #fff;
     font-family: ${props => props.theme.fonts[1]};
+    overflow-x: hidden;
 }
 
 button {

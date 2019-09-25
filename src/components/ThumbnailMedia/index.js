@@ -6,6 +6,11 @@ import ArrowBack from '../icons/ArrowBack'
 const ThumbnailMedia = props => {
   const { content } = props
 
+  const capitalizeFLetter = text => {
+    let capsFirst = text.charAt(0).toUpperCase() + text.slice(1)
+    return capsFirst
+  }
+
   return (
     <>
       {content &&
@@ -19,7 +24,7 @@ const ThumbnailMedia = props => {
               <div>
                 <p>{info.length}</p>
                 <p>{info.date}</p>
-                <p>{info.type}</p>
+                <p>{capitalizeFLetter(info.type)}</p>
               </div>
             </div>
           </StyledThumbnailMedia>

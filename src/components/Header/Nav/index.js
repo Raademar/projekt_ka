@@ -9,6 +9,7 @@ import { NavWrapper, MenuButton } from './style'
 import Menu from './Menu'
 const Nav = props => {
   const [menuOpen, setMenuOpen] = useState(false)
+  console.log(menuOpen)
 
   // add so if ther is a back the arrow will show, else nothing
   return (
@@ -24,9 +25,11 @@ const Nav = props => {
           <Hamburger />
         </MenuButton>
       </NavWrapper>
-      {menuOpen && (
-        <Menu close={() => setMenuOpen(false)} active={props.active}></Menu>
-      )}
+      <Menu
+        close={() => setMenuOpen(false)}
+        active={props.active}
+        menuOpen={menuOpen}
+      ></Menu>
     </>
   )
 }

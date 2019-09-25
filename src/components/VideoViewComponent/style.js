@@ -5,6 +5,7 @@ export const StyledVideoView = styled.div`
   flex-direction: column;
   height: 100%;
   padding: 20px;
+  background-color: #efefef;
 
   div {
     display: flex;
@@ -17,6 +18,7 @@ export const StyledVideoView = styled.div`
 
   .share-btns {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     background: #323332;
@@ -97,6 +99,7 @@ export const StyledVideoView = styled.div`
   .sb-soundplayer-volume-range {
     -webkit-appearance: none;
     width: 98%;
+    background: #efefef;
   }
   .sb-soundplayer-volume-range:focus {
     outline: none;

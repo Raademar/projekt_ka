@@ -68,12 +68,12 @@ const VideoViewComponent = props => {
           </div>
         </div>
       )}
-      {/* <div className="share-btns">
+      <div className="share-btns">
         <Facebook />
         <Instagram />
         <Twitter />
         <LinkedIn />
-      </div> */}
+      </div>
     </StyledVideoView>
   )
 }
