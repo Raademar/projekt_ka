@@ -1,32 +1,28 @@
 import styled from 'styled-components'
 
 export const StyledCategoryCard = styled.div`
-    height: 157px;
-    width: 157px;
-    /* background-color: rgba(233, 90, 50, 0.7) ;
-    background-image: url(${props => props.backgroundImage});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; */
-
-    background: ${props =>
+  height: 162px;
+  width: 177px;
+  background: ${props =>
       props.backgroundColor
         ? `linear-gradient(rgba(50, 51, 50, 0.7), rgba(50, 51, 50, 0.7))`
-        : `linear-gradient(rgba(233, 90, 50, 0.7), rgba(233, 90, 50, 0.7))`}, 
-        url(${props => props.backgroundImage}) center no-repeat; 
-    
-    background-size: cover;
+        : `linear-gradient(rgba(233, 90, 50, 0.7), rgba(233, 90, 50, 0.7))`},
+    url(${props => props.backgroundImage}) center no-repeat;
 
-    h5 {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        color: #FFF;
-    }
+  background-size: cover;
 
-    a {
-      text-decoration: none;
-    }
+  h5 {
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+  }
+
+  a {
+    text-decoration: none;
+  }
 `
