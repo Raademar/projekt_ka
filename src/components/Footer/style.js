@@ -6,10 +6,6 @@ export const StyledFooter = styled.div`
   background: #323332;
   display: flex;
   flex-direction: row;
-  /* position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0; */
   margin-top: 80px;
   padding: 0 30px;
 
