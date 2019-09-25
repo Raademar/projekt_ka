@@ -15,6 +15,7 @@ export const StyledCategoryFilter = styled.div`
       margin: 0;
       text-transform: uppercase;
       font-size: 14;
+      text-align: center;
     }
   }
 
