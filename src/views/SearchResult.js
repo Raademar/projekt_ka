@@ -37,7 +37,7 @@ const SearchResult = props => {
 
   return (
     <>
-      <Layout history={props.history} noMargin="true">
+      <Layout history={props.history} noMargin="true" placeholder={query}>
         <Filter location={props.location} addMargin="true"></Filter>
         <SrcResultsFilter searchResults={searchResults} />
       </Layout>

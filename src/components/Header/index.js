@@ -3,11 +3,11 @@ import Nav from './Nav'
 import Searchbar from './Searchbar'
 import { HeaderStyle } from './style'
 const Header = props => {
-  const { history, active } = props
+  const { history, active, placeholder } = props
   return (
     <HeaderStyle>
       <Nav active={active} history={history}></Nav>
-      <Searchbar></Searchbar>
+      <Searchbar placeholder={placeholder}></Searchbar>
     </HeaderStyle>
   )
 }
