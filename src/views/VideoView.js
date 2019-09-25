@@ -23,8 +23,6 @@ const VideoView = props => {
     setActiveView(content)
   }, [match.params.id])
 
-  console.log(content)
-
   useEffect(() => {
     if (activeView !== null) {
       getInfo()
