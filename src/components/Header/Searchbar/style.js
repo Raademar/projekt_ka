@@ -46,4 +46,8 @@ export const Input = styled.input`
   &:focus {
     outline: none;
   }
+
+  ::placeholder {
+    color: ${props => props.theme.colors.darkgrey};
+  }
 `
