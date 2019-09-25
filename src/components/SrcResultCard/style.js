@@ -24,6 +24,7 @@ export const StyledSrcResultCard = styled.div`
     width: 50%;
     margin: 0 15px 0 12px;
     font-size: 12px;
+    font-weight: normal;
   }
 
   p {
