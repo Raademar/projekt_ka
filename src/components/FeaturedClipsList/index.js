@@ -41,7 +41,7 @@ const FeaturedClipList = props => {
         <FeaturedClip
           image={clip.thumbnail}
           text={clip.title}
-          link={`/video/${clip.id}`}
+          link={`/media/${clip.id}`}
           key={index}
         />
       ))}
