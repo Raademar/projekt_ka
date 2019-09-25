@@ -19,7 +19,7 @@ const RecMedia = ({ content }) => {
   return (
     <StyledRecMedia>
       <h3>Du kanske också gillar...</h3>
-      <ThumbnailMedia content={recMediaToDisplay} />
+      <ThumbnailMedia content={recMediaToDisplay} color={'white'} />
     </StyledRecMedia>
   )
 }

@@ -41,7 +41,7 @@ const VideoView = props => {
 
   return (
     <>
-      <Layout history={props.history}>
+      <Layout history={props.history} noMargin={true}>
         {activeView && (
           <VideoViewComponent
             activeView={activeView}

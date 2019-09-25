@@ -11,17 +11,16 @@ const ThumbnailMedia = props => {
       {content &&
         content.map((info, i) => (
           <StyledThumbnailMedia color={props.color} key={i}>
-            <img src={info.thumbnail} />
-            <h2>{info.title}</h2>
+            <NavLink to={`/media/${info.id}`}>
+              <img src={info.thumbnail} />
+              <h2>{info.title}</h2>
+            </NavLink>
             <div>
               <div>
                 <p>{info.length}</p>
                 <p>{info.date}</p>
                 <p>{info.type}</p>
               </div>
-              <NavLink to={`/video/${info.id}`}>
-                <ArrowBack color="darkgrey" flip />
-              </NavLink>
             </div>
           </StyledThumbnailMedia>
         ))}

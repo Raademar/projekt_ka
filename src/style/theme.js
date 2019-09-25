@@ -3,7 +3,7 @@ export default {
     black: ['#000000', '#101820'], // Pantone Black 6 C
     white: ['#ffffff', '#FFFEFB'],
     darkgrey: '#323332',
-    lightgrey: '#C4C4C4',
+    lightgrey: '#EFEFEF',
     gold: '#D0843C',
     orange: '#E95A32'
   },

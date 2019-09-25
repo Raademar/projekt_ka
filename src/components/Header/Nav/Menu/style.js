@@ -22,7 +22,7 @@ export const MenuWrapper = styled.div`
 
   a {
     color: ${props => props.theme.colors.white[1]};
-    margin-bottom: 12px;
+    margin-bottom: 24px;
     font-size: 24px;
     text-decoration: none;
   }

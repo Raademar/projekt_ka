@@ -4,6 +4,16 @@ export const StyledVideoView = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding: 20px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      margin: 20px 0;
+    }
+  }
 
   .share-btns {
     display: flex;
