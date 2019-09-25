@@ -6,7 +6,6 @@ const Searchbar = props => {
   const [position, setPosition] = useState(window.pageYOffset)
   const [visible, setVisible] = useState(true)
   const [inputValue, setInputValue] = useState('')
-  console.log(props)
   useEffect(() => {
     const handleScroll = () => {
       let prevPos = window.pageYOffset
