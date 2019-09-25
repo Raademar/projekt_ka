@@ -38,8 +38,6 @@ const App = ({ history, location }) => {
     })
   }
 
-  console.log(data)
-
   return (
     <Router history={history}>
       <ResetScroll>

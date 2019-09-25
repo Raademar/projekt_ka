@@ -22,7 +22,6 @@ const Searchbar = props => {
 
   const handleInputValue = e => {
     setInputValue(e.target.value)
-    console.log(e.target.value)
   }
 
   return (

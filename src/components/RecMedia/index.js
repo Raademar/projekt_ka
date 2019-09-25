@@ -14,8 +14,6 @@ const RecMedia = ({ content }) => {
     )
   })
 
-  console.log(recMediaToDisplay)
-
   return (
     <StyledRecMedia>
       <h3>Du kanske också gillar...</h3>

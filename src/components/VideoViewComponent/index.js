@@ -13,7 +13,6 @@ const VideoViewComponent = props => {
   const { track, videoView, podView, activeView, mediaView } = props
   const kulturAkademinBG = './images/categories/teaather.jpg'
 
-  console.log(mediaView)
   const opts = {
     height: '191',
     width: '100%',

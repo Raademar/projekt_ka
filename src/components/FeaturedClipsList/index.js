@@ -33,8 +33,6 @@ const ArrayOfClips = [
 const FeaturedClipList = props => {
   const { news } = props
 
-  console.log(news)
-
   return (
     <StyledFeaturedClipList>
       {news.map((clip, index) => (

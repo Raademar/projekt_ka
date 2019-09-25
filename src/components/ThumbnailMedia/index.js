@@ -5,7 +5,6 @@ import ArrowBack from '../icons/ArrowBack'
 
 const ThumbnailMedia = props => {
   const { content } = props
-  console.log(props)
   return (
     <>
       {content &&
