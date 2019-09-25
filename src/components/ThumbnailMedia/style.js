@@ -9,10 +9,15 @@ export const StyledThumbnailMedia = styled.div`
   flex-direction: column;
   margin-bottom: 20px;
 
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+
   img {
     width: 100%;
     height: 170px;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   h2 {

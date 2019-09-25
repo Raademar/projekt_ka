@@ -42,7 +42,7 @@ const VideoViewComponent = props => {
       )}
       {podView && (
         <div className="p1 mb3 mt1 flex flex-center bg-darken-1 red rounded">
-          <img src={activeView[0].thumbnail} alt="" />
+          <img loading="lazy" src={activeView[0].thumbnail} alt="" />
           <div>
             <p className="nowrap caps flex-auto m0">
               {track ? track.title : 'Loading...'}

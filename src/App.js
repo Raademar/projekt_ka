@@ -61,7 +61,7 @@ const App = ({ history, location }) => {
                     ></Route>
                     <Route
                       exact
-                      path="/video/:id"
+                      path="/media/:id"
                       component={VideoView}
                     ></Route>
                     <Route

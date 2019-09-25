@@ -8,6 +8,9 @@ export const FilterWrapper = styled.div`
   div {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+  }
+
+  > button {
+    align-self: flex-end;
   }
 `
