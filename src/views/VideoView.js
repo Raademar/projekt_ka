@@ -21,7 +21,9 @@ const VideoView = props => {
 
   useEffect(() => {
     setActiveView(content)
-  }, [])
+  }, [match.params.id])
+
+  console.log(content)
 
   useEffect(() => {
     if (activeView !== null) {
