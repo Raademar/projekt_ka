@@ -108,7 +108,7 @@ export const menuArray = [
     ]
   },
   {
-    title: 'Arebetsliv',
+    title: 'Arbetsliv',
     url: 'arbetsliv',
     image: './images/categories/work_life.jpg',
     subcategory: [
