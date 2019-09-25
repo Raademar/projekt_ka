@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  padding: 20px;
+  padding: 24px;
   color: white;
   background: ${props => props.theme.colors.lightgrey};
 

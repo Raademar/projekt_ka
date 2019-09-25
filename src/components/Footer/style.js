@@ -11,12 +11,13 @@ export const StyledFooter = styled.div`
   left: 0;
   right: 0; */
   margin-top: 80px;
+  padding: 0 30px;
 
   div:first-of-type {
-    width: 40vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 67px;
   }
 
   div:last-of-type {
@@ -28,6 +29,10 @@ export const StyledFooter = styled.div`
     align-content: center;
     svg {
       margin: 12px;
+    }
+    svg:nth-child(4),
+    svg:nth-child(8) {
+      margin-right: 0;
     }
   }
 `
