@@ -10,6 +10,10 @@ export const FilterWrapper = styled.div`
     flex-direction: column;
   }
 
+  h5 {
+    margin-top: 10px;
+  }
+
   > button {
     align-self: flex-end;
   }
