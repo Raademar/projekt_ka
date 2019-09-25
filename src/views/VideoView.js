@@ -21,7 +21,7 @@ const VideoView = props => {
 
   useEffect(() => {
     setActiveView(content)
-  })
+  }, [])
 
   useEffect(() => {
     if (activeView !== null) {
