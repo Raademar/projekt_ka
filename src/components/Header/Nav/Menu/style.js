@@ -12,7 +12,7 @@ export const MenuWrapper = styled.div`
   height: 100vh;
   font-family: ${props => props.theme.fonts[0]};
   color: ${props => props.theme.colors.white[1]};
-  padding: 20px;
+  padding: 24px;
   text-transform: uppercase;
 
   a:first-of-type {
