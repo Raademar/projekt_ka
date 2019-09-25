@@ -2,10 +2,10 @@ import styled from 'styled-components'
 
 export const MenuWrapper = styled.div`
   background-color: ${props => props.theme.colors.darkgrey};
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: ${props => (props.menuOpen ? '0' : '-100vw')};
-  opacity: ${props => (props.menuOpen ? '1' : '0')};
+  right: ${props => (props.menuOpen || props.filterOpen ? '0' : '-100vw')};
+  opacity: ${props => (props.menuOpen || props.filterOpen ? '1' : '0')};
   z-index: 999;
   display: flex;
   flex-direction: column;
