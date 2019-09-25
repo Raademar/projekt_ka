@@ -20,7 +20,7 @@ export const SearchbarStyled = styled.div`
     height: 6vh;
   }
   button {
-    height: 44px;
+    height: 100%;
     position: relative;
     right: 1px;
     background-color: #d0843c;
@@ -32,11 +32,13 @@ export const SearchbarStyled = styled.div`
   }
 `
 export const Input = styled.input`
+  height: 100%;
   width: 80%;
   background-color: #d0843c;
   border: 0;
   border-radius: 0;
-  padding: 2px;
+  padding: 2px 5px;
+  font-family: ${props => props.theme.fonts[1]};
 
   font-size: 1.5em;
 
