@@ -3,12 +3,14 @@ import React, { useContext, useEffect, useState } from 'react'
 import SrcResultsFilter from '../components/SrcResultsFilter'
 import Layout from '../components/Layout'
 import Filter from '../components/Filter'
-import { DataContext } from '../App'
+import { DataContext, SearchResultContext, FilteredDataContext } from '../App'
 
 const SearchResult = props => {
   const { location } = props
   let searchWord = location.search.split('?')
   const { data } = useContext(DataContext)
+  const { searchResult, setSearchResult } = useContext(SearchResultContext)
+  const { filteredData, updateFilteredData } = useContext(FilteredDataContext)
   const [searchResults, setSearchResults] = useState([])
   const [query, setQuery] = useState(searchWord[1])
 
@@ -32,14 +34,24 @@ const SearchResult = props => {
     return resutlts
   }
   useEffect(() => {
-    setSearchResults(searchQuery(data))
-  }, [query])
+    // setSearchResults(searchQuery(data))
+    setSearchResult(searchQuery(data))
+    updateFilteredData(searchResult)
+  }, [])
 
   return (
     <>
       <Layout history={props.history} noMargin="true" placeholder={query}>
         <Filter location={props.location} addMargin="true"></Filter>
-        <SrcResultsFilter searchResults={searchResults} />
+        <SrcResultsFilter
+          searchResults={
+            filteredData &&
+            filteredData.length > 0 &&
+            filteredData.length !== data.length
+              ? filteredData
+              : searchResult
+          }
+        />
       </Layout>
     </>
   )

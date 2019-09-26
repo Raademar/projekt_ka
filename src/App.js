@@ -17,12 +17,14 @@ export const SortContext = createContext(null)
 export const DataContext = createContext(null)
 export const FilterContext = createContext(null)
 export const FilteredDataContext = createContext(null)
+export const SearchResultContext = createContext(null)
 
 const App = ({ history, location }) => {
   const [sort, setSort] = useState('Populärt')
   const [data, updatePageData] = useState(pageData)
-  const [filteredData, updateFilteredData] = useState(data)
+  const [filteredData, updateFilteredData] = useState([])
   const [filterType, updateFilter] = useState('')
+  const [searchResult, setSearchResult] = useState([])
 
   if (sort === 'Tidigast först') {
     data.sort((a, b) => {
@@ -50,31 +52,35 @@ const App = ({ history, location }) => {
                   <FilteredDataContext.Provider
                     value={{ filteredData, updateFilteredData }}
                   >
-                    <Switch>
-                      <Route path="?q=filter" component={Start}></Route>
-                      <Route exact path="/" component={Start}></Route>
-                      <Route exact path="/about" component={About}></Route>
-                      <Route
-                        exact
-                        path="/search"
-                        component={SearchResult}
-                      ></Route>
-                      <Route
-                        exact
-                        path="/media/:id"
-                        component={VideoView}
-                      ></Route>
-                      <Route
-                        exact
-                        path="/:category/:subcategory"
-                        component={SubcategoryPage}
-                      ></Route>
-                      <Route
-                        exact
-                        path="/:category"
-                        component={CategoryPage}
-                      ></Route>
-                    </Switch>
+                    <SearchResultContext.Provider
+                      value={{ searchResult, setSearchResult }}
+                    >
+                      <Switch>
+                        <Route path="?q=filter" component={Start}></Route>
+                        <Route exact path="/" component={Start}></Route>
+                        <Route exact path="/about" component={About}></Route>
+                        <Route
+                          exact
+                          path="/search"
+                          component={SearchResult}
+                        ></Route>
+                        <Route
+                          exact
+                          path="/media/:id"
+                          component={VideoView}
+                        ></Route>
+                        <Route
+                          exact
+                          path="/:category/:subcategory"
+                          component={SubcategoryPage}
+                        ></Route>
+                        <Route
+                          exact
+                          path="/:category"
+                          component={CategoryPage}
+                        ></Route>
+                      </Switch>
+                    </SearchResultContext.Provider>
                   </FilteredDataContext.Provider>
                 </DataContext.Provider>
               </FilterContext.Provider>
