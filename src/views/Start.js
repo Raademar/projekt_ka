@@ -1,8 +1,5 @@
-import React, { useContext } from 'react'
-import Header from '../components/Header'
+import React, { useContext, useEffect } from 'react'
 import CategoryFilter from '../components/CategoryFilter'
-import FeaturedClipsList from '../components/FeaturedClipsList'
-import Footer from '../components/Footer'
 import Layout from '../components/Layout'
 import { menuArray } from '../data/menuArray'
 import Filter from '../components/Filter'
@@ -11,14 +8,25 @@ import ThumbnailMedia from '../components/ThumbnailMedia'
 import { StoreContext } from '../utils/store'
 
 const Start = props => {
-  // const { data, setData } = useContext(DataContext)
-  const { filteredData, updateFilteredData } = useContext(StoreContext)
+  const { data, setData, filteredData, updateFilteredData } = useContext(StoreContext)
+  const renderThumbNailData = () => {
+    return <ThumbnailMedia color="white" content={filteredData} />
+  }
+
+  useEffect(() => {
+    updateFilteredData(data)
+  }, [])
+
+  useEffect(() => {
+    renderThumbNailData()
+  }, [filteredData])
+    
   return (
     <>
       <Layout history={props.history}>
         <CategoryFilter array={menuArray} pathName={props.location.pathname} />
         <Filter location={props.location} />
-        <ThumbnailMedia color="white" content={filteredData} />
+        {renderThumbNailData()}
       </Layout>
     </>
   )

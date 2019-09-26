@@ -14,7 +14,8 @@ import {
   SortContext,
   FilterContext,
   DataContext,
-  FilteredDataContext
+  FilteredDataContext,
+  SearchResultContext
 } from '../../../../App'
 import { StoreContext } from '../../../../utils/store'
 import pageData from '../../../../data/data.json'
@@ -23,7 +24,7 @@ const filterItems = ['Video', 'Podcast']
 const sortItems = ['A-Ö', 'Populärt', 'Senast först', 'Tidigast först']
 
 const Menu = props => {
-  const { close, filter, menuOpen, filterOpen } = props
+  const { close, filter, menuOpen, filterOpen, searchResults } = props
 
   const { data, updatePageData } = useContext(StoreContext)
   const { sort, setSort } = useContext(StoreContext)
@@ -37,10 +38,10 @@ const Menu = props => {
   useEffect(() => {
     setSort(addedSort)
     updateFilter(filterTypeString)
-    filterData()
+    filterData(searchResult.length < 1 ? data : searchResult)
   }, [addedSort, filterTypeString, addedFilter])
 
-  const filterData = () => {
+  const filterData = data => {
     let filteredData = data
     let tempData
     if (filterTypeString !== '') {
@@ -51,7 +52,9 @@ const Menu = props => {
       })
       updateFilteredData(tempData)
     }
+    console.log(tempData)
   }
+  console.log(filteredData)
 
   return (
     <MenuWrapper menuOpen={menuOpen} filterOpen={filterOpen}>

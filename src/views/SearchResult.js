@@ -8,7 +8,7 @@ import { StoreContext } from '../utils/store'
 const SearchResult = props => {
   const { location } = props
   let searchWord = location.search.split('?')
-  const { data } = useContext(StoreContext)
+  const { data, searchResult, setSearchResult, filteredData, updateFilteredData } = useContext(StoreContext)
   const [searchResults, setSearchResults] = useState([])
   const [query, setQuery] = useState(searchWord[1])
 
@@ -32,14 +32,24 @@ const SearchResult = props => {
     return resutlts
   }
   useEffect(() => {
-    setSearchResults(searchQuery(data))
-  }, [query])
+    // setSearchResults(searchQuery(data))
+    setSearchResult(searchQuery(data))
+    updateFilteredData(searchResult)
+  }, [])
 
   return (
     <>
       <Layout history={props.history} noMargin="true" placeholder={query}>
         <Filter location={props.location} addMargin="true"></Filter>
-        <SrcResultsFilter searchResults={searchResults} />
+        <SrcResultsFilter
+          searchResults={
+            filteredData &&
+            filteredData.length > 0 &&
+            filteredData.length !== data.length
+              ? filteredData
+              : searchResult
+          }
+        />
       </Layout>
     </>
   )

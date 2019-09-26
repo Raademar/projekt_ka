@@ -3,7 +3,14 @@ import { Wrapper } from './style'
 import Header from '../Header'
 import Footer from '../Footer'
 const Layout = props => {
-  const { active, history, children, noMargin, placeholder } = props
+  const {
+    active,
+    history,
+    children,
+    noMargin,
+    placeholder,
+    searchResults
+  } = props
   return (
     <>
       <Header
