@@ -24,9 +24,11 @@ const Nav = props => {
           <Hamburger />
         </MenuButton>
       </NavWrapper>
-      {menuOpen && (
-        <Menu close={() => setMenuOpen(false)} active={props.active}></Menu>
-      )}
+      <Menu
+        close={() => setMenuOpen(false)}
+        active={props.active}
+        menuOpen={menuOpen}
+      ></Menu>
     </>
   )
 }

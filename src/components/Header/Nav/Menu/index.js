@@ -22,7 +22,7 @@ const filterItems = ['Video', 'Podcast']
 const sortItems = ['A-Ö', 'Populärt', 'Senast först', 'Tidigast först']
 
 const Menu = props => {
-  const { close, filter } = props
+  const { close, filter, menuOpen, filterOpen } = props
 
   const { data, updatePageData } = useContext(DataContext)
   const { sort, setSort } = useContext(SortContext)
@@ -53,7 +53,7 @@ const Menu = props => {
   }
 
   return (
-    <MenuWrapper>
+    <MenuWrapper menuOpen={menuOpen} filterOpen={filterOpen}>
       <CloseButton onClick={close} filter={filter}>
         {filter ? <ArrowBack /> : <Minus />}
       </CloseButton>

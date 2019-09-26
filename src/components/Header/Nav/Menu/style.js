@@ -4,7 +4,8 @@ export const MenuWrapper = styled.div`
   background-color: ${props => props.theme.colors.darkgrey};
   position: fixed;
   top: 0;
-  left: 0;
+  right: ${props => (props.menuOpen || props.filterOpen ? '0' : '-100vw')};
+  opacity: ${props => (props.menuOpen || props.filterOpen ? '1' : '0')};
   z-index: 999;
   display: flex;
   flex-direction: column;
@@ -14,6 +15,7 @@ export const MenuWrapper = styled.div`
   color: ${props => props.theme.colors.white[1]};
   padding: 24px;
   text-transform: uppercase;
+  transition: opacity 0.4s 0.1s ease-in-out, right 0.4s ease-in-out;
 
   a:first-of-type {
     margin-top: 43px;

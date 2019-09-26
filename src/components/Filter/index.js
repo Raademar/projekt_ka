@@ -9,6 +9,7 @@ import { SortContext, FilterContext, DataContext } from '../../App'
 const Filter = props => {
   const { location } = props
   const [filterOpen, setFilterOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const { sort, setSort } = useContext(SortContext)
   const { data, updatePageData } = useContext(DataContext)
@@ -35,8 +36,11 @@ const Filter = props => {
       >
         <FilterButton />
       </button>
-
-      {filterOpen && <Menu filter="true" close={() => setFilterOpen(false)} />}
+      <Menu
+        filter="true"
+        filterOpen={filterOpen}
+        close={() => setFilterOpen(false)}
+      />
     </FilterWrapper>
   )
 }
