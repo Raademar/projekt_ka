@@ -31,7 +31,7 @@ const Searchbar = props => {
           value={inputValue}
           placeholder={props.placeholder}
         />
-        <NavLink to={`/search?${inputValue}`}>
+        <NavLink to={`/search?${inputValue != '' ? inputValue : 'not-found'}`}>
           <button>
             <Search />
           </button>
