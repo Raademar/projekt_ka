@@ -8,6 +8,7 @@ export default ({ children }) => {
   const [data, updatePageData] = useState(pageData)
   const [filteredData, updateFilteredData] = useState(data)
   const [filterType, updateFilter] = useState('')
+  const [searchResult, setSearchResult] = useState([])
 
   const store = {
     sort,
@@ -17,7 +18,9 @@ export default ({ children }) => {
     filteredData,
     updateFilteredData,
     filterType,
-    updateFilter
+    updateFilter,
+    searchResult,
+    setSearchResult
   }
 
   return <StoreContext.Provider value={store}>{children}</StoreContext.Provider>

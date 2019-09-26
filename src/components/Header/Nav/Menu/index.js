@@ -30,6 +30,7 @@ const Menu = props => {
   const { sort, setSort } = useContext(StoreContext)
   const { filterType, updateFilter } = useContext(StoreContext)
   const { filteredData, updateFilteredData } = useContext(StoreContext)
+  const { searchResult } = useContext(StoreContext)
 
   const [filterTypeString, setFilterType] = useState(filterType)
   const [addedFilter, setAddedFilter] = useState(null)
@@ -52,9 +53,9 @@ const Menu = props => {
       })
       updateFilteredData(tempData)
     }
-    console.log(tempData)
+    // console.log(tempData)
   }
-  console.log(filteredData)
+  // console.log(filteredData)
 
   return (
     <MenuWrapper menuOpen={menuOpen} filterOpen={filterOpen}>

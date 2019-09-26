@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Wrapper } from './style'
 import SrcResultCard from '../SrcResultCard'
-import Filter from '../Filter'
 
 const SrcResultFilter = props => {
   const { searchResults } = props
