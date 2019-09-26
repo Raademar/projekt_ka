@@ -27,15 +27,15 @@ const App = ({ history, location }) => {
   const [searchResult, setSearchResult] = useState([])
 
   if (sort === 'Tidigast först') {
-    data.sort((a, b) => {
+    filteredData.sort((a, b) => {
       return new Date(a.date) - new Date(b.date)
     })
   } else if (sort === 'Senast först') {
-    data.sort((a, b) => {
+    filteredData.sort((a, b) => {
       return new Date(b.date) - new Date(a.date)
     })
   } else if (sort === 'A-Ö') {
-    data.sort((a, b) => {
+    filteredData.sort((a, b) => {
       return b.title - a.title
     })
   }
