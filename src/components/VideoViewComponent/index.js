@@ -10,10 +10,9 @@ import { PlayButton, Timer, VolumeControl } from 'react-soundplayer/components'
 import { withSoundCloudAudio } from 'react-soundplayer/addons'
 
 const VideoViewComponent = props => {
-  const { track, videoView, podView, activeView, mediaView } = props
+  const { track, videoView, podView, activeView } = props
   const kulturAkademinBG = './images/categories/teaather.jpg'
 
-  console.log(mediaView)
   const opts = {
     height: '191',
     width: '100%',
@@ -22,7 +21,7 @@ const VideoViewComponent = props => {
       autoplay: 1
     }
   }
-
+  console.log(activeView)
   const _onReady = event => {
     // access to player in all event handlers via event.target
     event.target.pauseVideo()
@@ -45,7 +44,7 @@ const VideoViewComponent = props => {
           <img loading="lazy" src={activeView[0].thumbnail} alt="" />
           <div>
             <p className="nowrap caps flex-auto m0">
-              {track ? track.title : 'Loading...'}
+              {track ? activeView[0].title : 'Loading...'}
             </p>
           </div>
           <div className="play-volume-holder">
@@ -66,6 +65,7 @@ const VideoViewComponent = props => {
               {...props}
             />
           </div>
+          <p>{activeView[0].description}</p>
         </div>
       )}
       <div className="share-btns">

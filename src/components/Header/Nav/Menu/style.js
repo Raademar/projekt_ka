@@ -13,7 +13,7 @@ export const MenuWrapper = styled.div`
   height: 100vh;
   font-family: ${props => props.theme.fonts[0]};
   color: ${props => props.theme.colors.white[1]};
-  padding: 20px;
+  padding: 24px;
   text-transform: uppercase;
   transition: opacity 0.4s 0.1s ease-in-out, right 0.4s ease-in-out;
 
@@ -61,7 +61,7 @@ export const FilterButton = styled.button`
   h2 {
     color: ${props => props.theme.colors.white[1]};
     font-weight: ${props => props.added};
-    margin-bottom: 12px;
+    margin-bottom: 24px;
     font-size: 24px;
     text-decoration: none;
     margin-top: 0;

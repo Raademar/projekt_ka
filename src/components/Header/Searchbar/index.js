@@ -6,7 +6,6 @@ const Searchbar = props => {
   const [position, setPosition] = useState(window.pageYOffset)
   const [visible, setVisible] = useState(true)
   const [inputValue, setInputValue] = useState('')
-
   useEffect(() => {
     const handleScroll = () => {
       let prevPos = window.pageYOffset
@@ -22,13 +21,16 @@ const Searchbar = props => {
 
   const handleInputValue = e => {
     setInputValue(e.target.value)
-    console.log(e.target.value)
   }
 
   return (
     <SearchbarStyled scroll={visible}>
       <form onSubmit={() => setInputValue(inputValue)}>
-        <Input onChange={handleInputValue} value={inputValue} />
+        <Input
+          onChange={handleInputValue}
+          value={inputValue}
+          placeholder={props.placeholder}
+        />
         <NavLink to={`/search?${inputValue}`}>
           <button>
             <Search />

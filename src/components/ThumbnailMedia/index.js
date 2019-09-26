@@ -10,7 +10,6 @@ const ThumbnailMedia = props => {
     let capsFirst = text.charAt(0).toUpperCase() + text.slice(1)
     return capsFirst
   }
-
   return (
     <>
       {content &&

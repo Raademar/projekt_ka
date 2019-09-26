@@ -14,7 +14,6 @@ const SubcategoryPage = props => {
     item => item.url === props.match.params.category
   )
 
-  console.log(props)
   const subcategory = category[0].subcategory.filter(
     item => item.url === props.match.params.subcategory
   )

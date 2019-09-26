@@ -17,5 +17,6 @@ export const StyledFeaturedClip = styled.div`
 
   p {
     margin: 0;
+    overflow: hidden;
   }
 `

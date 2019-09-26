@@ -14,11 +14,13 @@ const CategoryPage = props => {
   const loactionName = location.pathname.split('/')
 
   const category = menuArray.filter(item => item.url === loactionName[1])
-
+  console.log(category[0].title)
   const news = data.filter(item => {
+    console.log(item.tags)
     if (item.tags.includes(category[0].title)) {
       return item
     }
+    return item
   })
 
   return (

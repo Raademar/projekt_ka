@@ -14,10 +14,11 @@ export const SearchbarStyled = styled.div`
     text-decoration: none;
   }
   form {
-    width: 100%;
     display: flex;
     justify-content: center;
     height: 6vh;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   button {
     height: 100%;
@@ -33,7 +34,7 @@ export const SearchbarStyled = styled.div`
 `
 export const Input = styled.input`
   height: 100%;
-  width: 80%;
+  width: 90%;
   background-color: #d0843c;
   border: 0;
   border-radius: 0;
@@ -44,5 +45,9 @@ export const Input = styled.input`
 
   &:focus {
     outline: none;
+  }
+
+  ::placeholder {
+    color: ${props => props.theme.colors.darkgrey};
   }
 `
