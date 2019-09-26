@@ -26,7 +26,6 @@ const SrcResultFilter = props => {
 
   useEffect(() => {
     renderSearchResult()
-    console.log(searchResults)
   }, [searchResults])
 
   return renderSearchResult()
