@@ -23,8 +23,6 @@ const Filter = props => {
     }
   })
 
-  console.log(filterOpen)
-
   return (
     <FilterWrapper addMargin={props.addMargin}>
       <div>
