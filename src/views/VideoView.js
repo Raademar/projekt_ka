@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import VideoViewComponent from '../components/VideoViewComponent'
 import RecMedia from '../components/RecMedia'
 import Footer from '../components/Footer'
-import { DataContext } from '../App'
+import { StoreContext } from '../utils/store'
 
 const clientId = '45ca7c7c9b41fdcb2501bb7dd27e168b'
 const resolveUrl =
@@ -13,7 +13,7 @@ const resolveUrl =
 
 const VideoView = props => {
   const { match } = props
-  const { data } = useContext(DataContext)
+  const { data } = useContext(StoreContext)
   const [activeView, setActiveView] = useState(null)
   const [mediaView, setMediaView] = useState(null)
 

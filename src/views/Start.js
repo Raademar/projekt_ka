@@ -5,12 +5,10 @@ import { menuArray } from '../data/menuArray'
 import Filter from '../components/Filter'
 import ThumbnailMedia from '../components/ThumbnailMedia'
 
-import { DataContext, FilteredDataContext } from '../App'
+import { StoreContext } from '../utils/store'
 
 const Start = props => {
-  const { data, setData } = useContext(DataContext)
-  const { filteredData, updateFilteredData } = useContext(FilteredDataContext)
-
+  const { data, setData, filteredData, updateFilteredData } = useContext(StoreContext)
   const renderThumbNailData = () => {
     return <ThumbnailMedia color="white" content={filteredData} />
   }
@@ -22,7 +20,7 @@ const Start = props => {
   useEffect(() => {
     renderThumbNailData()
   }, [filteredData])
-
+    
   return (
     <>
       <Layout history={props.history}>

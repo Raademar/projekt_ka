@@ -4,10 +4,10 @@ import Header from '../components/Header'
 import ThumbnailMedia from '../components/ThumbnailMedia'
 import ResultPageTitle from '../components/ResultPageTitle'
 import { menuArray } from '../data/menuArray'
-import { DataContext } from '../App'
+import { StoreContext } from '../utils/store'
 
 const SubcategoryPage = props => {
-  const { data } = useContext(DataContext)
+  const { data } = useContext(StoreContext)
   const [activeData, setActiveData] = useState(null)
 
   const category = menuArray.filter(

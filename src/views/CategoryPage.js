@@ -6,11 +6,11 @@ import CategoryFilter from '../components/CategoryFilter'
 import FeaturedClipList from '../components/FeaturedClipsList'
 import ResultPageTitle from '../components/ResultPageTitle'
 import { menuArray } from '../data/menuArray'
-import { DataContext } from '../App'
+import { StoreContext } from '../utils/store'
 
 const CategoryPage = props => {
   const { location } = props
-  const { data } = useContext(DataContext)
+  const { data } = useContext(StoreContext)
   const loactionName = location.pathname.split('/')
 
   const category = menuArray.filter(item => item.url === loactionName[1])

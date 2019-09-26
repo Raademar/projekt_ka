@@ -5,15 +5,16 @@ import Menu from '../Header/Nav/Menu'
 import pageData from '../../data/data.json'
 
 import { SortContext, FilterContext, DataContext } from '../../App'
+import { StoreContext } from '../../utils/store'
 
 const Filter = props => {
   const { location } = props
   const [filterOpen, setFilterOpen] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const { sort, setSort } = useContext(SortContext)
-  const { data, updatePageData } = useContext(DataContext)
-  const { filterType, updateFilter } = useContext(FilterContext)
+  const { sort, setSort } = useContext(StoreContext)
+  const { data, updatePageData } = useContext(StoreContext)
+  const { filterType, updateFilter } = useContext(StoreContext)
 
   const search = location.search.split('=')
 

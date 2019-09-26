@@ -3,14 +3,12 @@ import React, { useContext, useEffect, useState } from 'react'
 import SrcResultsFilter from '../components/SrcResultsFilter'
 import Layout from '../components/Layout'
 import Filter from '../components/Filter'
-import { DataContext, SearchResultContext, FilteredDataContext } from '../App'
+import { StoreContext } from '../utils/store'
 
 const SearchResult = props => {
   const { location } = props
   let searchWord = location.search.split('?')
-  const { data } = useContext(DataContext)
-  const { searchResult, setSearchResult } = useContext(SearchResultContext)
-  const { filteredData, updateFilteredData } = useContext(FilteredDataContext)
+  const { data, searchResult, setSearchResult, filteredData, updateFilteredData } = useContext(StoreContext)
   const [searchResults, setSearchResults] = useState([])
   const [query, setQuery] = useState(searchWord[1])
 
