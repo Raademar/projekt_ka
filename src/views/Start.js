@@ -8,11 +8,11 @@ import { menuArray } from '../data/menuArray'
 import Filter from '../components/Filter'
 import ThumbnailMedia from '../components/ThumbnailMedia'
 
-import { DataContext, FilteredDataContext } from '../App'
+import { StoreContext } from '../utils/store'
 
 const Start = props => {
   // const { data, setData } = useContext(DataContext)
-  const { filteredData, updateFilteredData } = useContext(FilteredDataContext)
+  const { filteredData, updateFilteredData } = useContext(StoreContext)
   return (
     <>
       <Layout history={props.history}>

@@ -3,9 +3,10 @@ import { StyledRecMedia } from './style'
 import ThumbnailMedia from '../ThumbnailMedia'
 
 import { DataContext, FilteredDataContext } from '../../App'
+import { StoreContext } from '../../utils/store'
 
 const RecMedia = ({ content }) => {
-  const { filteredData, updateFilteredData } = useContext(FilteredDataContext)
+  const { filteredData, updateFilteredData } = useContext(StoreContext)
 
   const recMediaToDisplay = filteredData.filter(item => {
     return (

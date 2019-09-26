@@ -16,6 +16,7 @@ import {
   DataContext,
   FilteredDataContext
 } from '../../../../App'
+import { StoreContext } from '../../../../utils/store'
 import pageData from '../../../../data/data.json'
 
 const filterItems = ['Video', 'Podcast']
@@ -24,10 +25,10 @@ const sortItems = ['A-Ö', 'Populärt', 'Senast först', 'Tidigast först']
 const Menu = props => {
   const { close, filter, menuOpen, filterOpen } = props
 
-  const { data, updatePageData } = useContext(DataContext)
-  const { sort, setSort } = useContext(SortContext)
-  const { filterType, updateFilter } = useContext(FilterContext)
-  const { filteredData, updateFilteredData } = useContext(FilteredDataContext)
+  const { data, updatePageData } = useContext(StoreContext)
+  const { sort, setSort } = useContext(StoreContext)
+  const { filterType, updateFilter } = useContext(StoreContext)
+  const { filteredData, updateFilteredData } = useContext(StoreContext)
 
   const [filterTypeString, setFilterType] = useState(filterType)
   const [addedFilter, setAddedFilter] = useState(null)
