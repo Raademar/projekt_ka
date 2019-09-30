@@ -20,10 +20,6 @@ const Start = props => {
     return <ThumbnailMedia color="white" content={filteredData} />
   }
 
-  // const pathName = props.location.pathname == '/'
-  // console.log(props.history)
-  // console.log(searchResult)
-
   useEffect(() => {
     updateFilteredData(data)
     setSearchResult([])
