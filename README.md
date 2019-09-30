@@ -1,7 +1,7 @@
 # projekt_ka
 
 A website for streaming pod and videos for the organization [Kulturakademin](http://www.kulturakademin.com)
-[Live version here](http://projekt-ka.netlify.com)
+[Live version here](https://projekt-k.netlify.com/)
 
 ## TOOLS
 
