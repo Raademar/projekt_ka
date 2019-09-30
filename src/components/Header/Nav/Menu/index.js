@@ -53,9 +53,7 @@ const Menu = props => {
       })
       updateFilteredData(tempData)
     }
-    // console.log(tempData)
   }
-  // console.log(filteredData)
 
   return (
     <MenuWrapper menuOpen={menuOpen} filterOpen={filterOpen}>
