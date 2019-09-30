@@ -13,8 +13,7 @@ Data is being fetched from a local JSON file to provide examples.
 
 ```SH
 $ npm run start     # Start react app on localhost:3000
-$ npm run buils     # Builds the app
-$ npm run update    # Fetches all of Kulturakademins media infromation from YouTube and Soundcloud
+$ npm run build     # Builds the app
 ```
 
 ## DATA
