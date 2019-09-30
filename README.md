@@ -25,16 +25,16 @@ The media information is stored in .JSON in this format:
 # Addition data exist, just not needed att the moment.
 [
     {
-			"id": Integer,
-			"title": String,
-			"description": String,
-			"url": String,
-			"tags": [String],
-			"subcategory": [String],
-			"thumbnail": String,
-			"length": String,
-			"date": String,
-			"type": String
+	"id": Integer,
+	"title": String,
+	"description": String,
+	"url": String,
+	"tags": [String],
+	"subcategory": [String],
+	"thumbnail": String,
+	"length": String,
+	"date": String,
+	"type": String
     }
 ]
 ```
