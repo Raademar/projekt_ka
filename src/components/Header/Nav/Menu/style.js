@@ -6,7 +6,7 @@ export const MenuWrapper = styled.div`
   top: 0;
   right: ${props => (props.menuOpen || props.filterOpen ? '0' : '-100vw')};
   opacity: ${props => (props.menuOpen || props.filterOpen ? '1' : '0')};
-  z-index: 999;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   width: 100%;
